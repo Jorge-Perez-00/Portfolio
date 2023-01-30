@@ -1,0 +1,246 @@
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main-container {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+
+.container1 {
+    position: relative;
+    margin: auto;
+    margin-right: 0;
+    width: 100%;
+    height: 40%;
+    /*
+    width: 55%;
+    height: 100%;
+    
+    max-width: 150vh;
+    max-height: 100vh;
+    */
+    background-color: rgba(250, 235, 215, 0.425);
+
+}
+
+.container2 {
+    position: relative;
+    margin: auto;
+    margin-left: 0;
+    width: 100%;
+    height: 60%;
+
+    /*
+    width: 45%;
+    height: 100%;
+
+    max-width: 60vh;
+    max-height: 100vh;
+    */
+
+    background-color: aqua;
+
+}
+
+.games-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*
+    width: 35%;
+    height: 35%;
+
+    max-width: 28vh;
+    max-height: 20vh;
+    */
+
+    /*
+    width: 30vmin ;
+    height: 30vmin;
+    */
+    width: 40vmin;
+    height: 40vmin;
+
+
+    max-width: 20vh;
+    max-height: 20vh;
+
+    background-color: transparent;
+    outline: .10vmin solid white;
+    z-index: 9;
+
+}
+
+.game {
+    display: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.active {
+    display: block;
+}
+
+/* SLIDESHOW BUTTONS SECTION */
+
+.slideshowButtons {
+    position: absolute;
+    width: 12vmin;
+    height: 12vmin;
+
+    max-width: 6vh;
+    max-height: 6vh;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    border-style: none;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.left-button {
+    margin-left: -3%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-275%, -50%);
+}
+
+.right-button {
+    margin-left: 3%;
+    top: 50%;
+    left: 50%;
+    transform: translate(175%, -50%);
+}
+
+.left-slide-animation {
+    animation: leftFadeIn .5s ease-in-out
+}
+
+.right-slide-animation {
+    animation: rightFadeIn .5s ease-in-out
+}
+
+@keyframes leftFadeIn {
+    0% {
+        margin-left: -50px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes rightFadeIn {
+    0% {
+        margin-left: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-right: 0px;
+        opacity: 1;
+    }
+}
+
+
+.codeboy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 70%;
+    /*
+    height: 80%;
+    */
+    height: 90%;
+    /*
+    max-width: 40vh;
+    max-height: 50vh;
+    */
+    max-width: 40vh;
+    max-height: 60vh;
+
+    /*background-color: blue;
+    */
+}
+
+@media screen and (min-width: 150vh) {
+    .main-container {
+        display: flex;
+    }
+
+    .container1 {
+
+        width: 50%;
+        height: 100%;
+
+        /*
+        max-width: 150vh;
+        max-height: 100vh;
+        */
+        max-width: 100vh;
+
+    }
+
+    .container2 {
+        width: 35%;
+        height: 100%;
+
+        max-width: 60vh;
+        max-height: 100vh;
+    }
+
+    /*GRID LAYOUT SECTION*/
+
+    .games-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+        /*background-color: antiquewhite;
+        */
+        width: auto;
+        height: auto;
+
+        max-width: none;
+        max-height: none;
+    }
+
+    .game {
+        display: block;
+        width: 30vmin;
+        height: 30vmin;
+
+        max-width: 20vh;
+        max-height: 20vh;
+
+        background-color: transparent;
+
+        margin: 7.5vmin 2.5vmin;
+
+    }
+
+    .slideshowButtons {
+        display: none;
+    }
+
+    .left-slide-animation {
+        animation: none;
+    }
+
+    .right-slide-animation {
+        animation: none;
+    }
+
+}
