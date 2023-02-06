@@ -67,7 +67,7 @@ class Homepage extends Component {
 
     render() {
         return (
-            <div className='main-container'>
+            <div className={`main-container bg-${this.state.color}`}/*'main-container'*/>
 
                 <div className="colors-main=container">
                     <div className={`color-buttons-container ${this.state.colorButtons}`}>

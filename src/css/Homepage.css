@@ -13,6 +13,7 @@ img {
     object-fit: contain;
     display: block;
     
+    
 }
 
 .arrow-buttons {
@@ -90,17 +91,39 @@ img {
     padding: 0;
     width: 100%;
     height: 100%;
-    /*
+
+}
+
+.main-container.bg-normal {
+    background-image: linear-gradient(to right bottom, #121212, #333333, #585858, #7f7f7f, #a9a9a9);
+}
+
+.main-container.bg-red {
+    background-image: linear-gradient(to right bottom, #121212, #281e2e, #492543, #72274e, #9b274c, #ad2a48, #bd3042, #cb3939, #cc3b3b, #cd3d3d, #ce3e3e, #cf4040);
+}
+
+.main-container.bg-orange {
+    background-image: linear-gradient(to right bottom, #121212, #302a30, #55424b, #7f5c60, #a77a70, #ba8a77, #ca9c7e, #d9af86, #dfb489, #e5b88c, #ecbd8f, #f2c292);
+}
+
+.main-container.bg-yellow {
+    background-image: linear-gradient(to right bottom, #121212, #393138, #6c5158, #a0756e, #cba180, #ddb682, #e9cf84, #ede98b, #f0ea76, #f2ec60, #f5ed45, #f8ee1e);
+}
+
+.main-container.bg-skyblue {
     background-image: linear-gradient(to right bottom, #121212, #303139, #4a5565, #617d92, #75a8c0, #7bbbd2, #81cee4, #87e1f5, #80dff3, #7adcf1, #72daf0, #6bd7ee);
-*/
+}
 
-/*
-background-image: linear-gradient(to right bottom, #121212, #25272e, #343e4d, #3e586c, #43748b, #47869d, #4b98ae, #4faabe, #56b5ca, #5dc0d6, #64cce2, #6bd7ee);
-*/
+.main-container.bg-blue {
+    background-image: linear-gradient(to right bottom, #121212, #2c2b35, #45475c, #5d6587, #7485b4, #7991ca, #7e9ee0, #81abf6, #77a5f7, #6c9ef9, #6198fa, #5691fb);
+}
 
-/*
-background-image: linear-gradient(to right bottom, #121212, #2b232c, #4c313f, #724149, #93544a, #a4654e, #b37752, #c08b56, #cc9865, #d9a673, #e5b483, #f2c292);
-*/
+.main-container.bg-purple {
+    background-image: linear-gradient(to right bottom, #121212, #28243a, #423665, #614891, #8558be, #965dd1, #a862e4, #bb67f7, #b963f6, #b660f5, #b45cf3, #b158f2);
+}
+
+.main-container.bg-pink {
+    background-image: linear-gradient(to right bottom, #121212, #312d3b, #564967, #826593, #b482c0, #ca8bd2, #e294e3, #fa9cf3, #f693ef, #f28beb, #ed82e6, #e979e2);
 }
 
 .color-buttons-container {
@@ -119,6 +142,7 @@ background-image: linear-gradient(to right bottom, #121212, #2b232c, #4c313f, #7
     transform: translate(0%, -50%);
 
     outline: .001vmin solid aliceblue;
+    
     border-radius: 5vmin;
     padding: 1vmin;
 
@@ -240,7 +264,9 @@ background-image: linear-gradient(to right bottom, #121212, #2b232c, #4c313f, #7
     max-height: 20vh;
 
     background-color: transparent;
-    outline: .10vmin solid white;
+    
+    /*outline: .10vmin solid white;
+    */
     z-index: 9;
 
 }
