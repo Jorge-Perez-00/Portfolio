@@ -9,6 +9,11 @@ import hideButtonImage from '../images/hide-button.png'
 */
 
 
+const GAMES = ['aboutme', 'skills', 'links', 'tictactoe', 'maze', 'codeboy']
+
+
+//console.log("test")
+
 
 class Homepage extends Component {
     constructor(props) {
@@ -18,6 +23,7 @@ class Homepage extends Component {
             animation: "right-slide-animation",
             colorButtons: "hide",
             color: "normal",
+            GAME_ID: null,
         }
     }
 
@@ -61,7 +67,22 @@ class Homepage extends Component {
         this.setState({
             color: COLOR,
         })
+    }
 
+    handleMouseEnter = (event) => {
+        let gameID = parseInt(event.target.id, 10);
+
+        //console.log(gameID);
+
+        this.setState({
+            GAME_ID: gameID,
+        })
+    }
+
+    handleMouseLeave = () => {
+        this.setState({
+            GAME_ID: null,
+        })
     }
 
 
@@ -103,30 +124,34 @@ class Homepage extends Component {
                         <button id={1} className='slideshowButtons right-button' onClick={this.updateGameDisplay}>
                             <img id={1} src={rightButtonImage} alt="right button" className='buttonImages' />
                         </button>
-                        <div className={`game game0 ${this.state.display === 0 ? "active " + this.state.animation : ""}`}>
-                            <img key={this.state.color} className="game-image" src={require(`../images/${this.state.color}-game-aboutme.png`)} alt="Game" />
-                        </div>
-                        <div className={`game game1 ${this.state.display === 1 ? "active " + this.state.animation : ""}`}>
-                            <img key={this.state.color} className="game-image" src={require(`../images/${this.state.color}-game-skills.png`)} alt="Game" />
-                        </div>
 
-                        <div className={`game game2 ${this.state.display === 2 ? "active " + this.state.animation : ""}`}>
-                            <img key={this.state.color} className="game-image" src={require(`../images/${this.state.color}-game-maze.png`)} alt="Game" />
-                        </div>
+                        {GAMES.map((game,gameID) => 
+                            <div key={this.state.color + gameID + 1} className={`game game${gameID} ${this.state.display === gameID ? "active " + this.state.animation : ""}`}>
+                                <div className="game-scene" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} >
 
-                        <div className={`game game3 ${this.state.display === 3 ? "active " + this.state.animation : ""}`}>
-                            <img key={this.state.color} className="game-image" src={require(`../images/${this.state.color}-game-tictactoe.png`)} alt="Game" />
-                        </div>
+                                    <img className={`game-title ${this.state.GAME_ID === gameID && 'game-title-active'} ${(game === 'maze' || game === 'tictactoe' || game === 'codeboy') && 'project-title'}`} src={require(`../images/title-${game}.png`)} alt="game title" />
+                                    <img className={`game-arrow ${this.state.GAME_ID === gameID && 'game-arrow-active'}`} src={require(`../images/hide-button.png`)} alt="triangle" />
 
-                        <div className={`game game4 ${this.state.display === 4 ? "active " + this.state.animation : ""}`}>
-                            <img key={this.state.color} className="game-image" src={require(`../images/${this.state.color}-game-links.png`)} alt="Game" />
-                        </div>
+                                    <div className={`game-box ${this.state.GAME_ID === gameID && 'rotation-active'}`} > 
+                                        <div className="game-face front">
+                                            <img id={gameID} className="game-image" src={require(`../images/${this.state.color}-game-${game}.png`)} alt="Game" />
+                                        </div>
+                                        <div className="game-face back">
+                                            <img id={gameID} src={require(`../images/${this.state.color}-game-back.png`)} alt="Game Back" />
+                                        </div>
+                                        <div className="game-face left">
+                                            <img id={gameID} className="game-side-images" src={require(`../images/${this.state.color}-game-left.png`)} alt="Game Left" />
+                                        </div>
+                                        <div className="game-face right">
+                                            <img id={gameID} className="game-side-images" src={require(`../images/${this.state.color}-game-right.png`)} alt="Game Right" />
+                                        </div>
+                                    </div>
+                                </div>
 
-                        <div className={`game game5 ${this.state.display === 5 ? "active " + this.state.animation : ""}`}>
-                            <img key={this.state.color} className="game-image" src={require(`../images/${this.state.color}-game.png`)} alt="Game" />
-                        </div>
+                            </div>
+                        )}
+                        
                     </div>
-
                 </div>
 
                 <div className='container2'>
