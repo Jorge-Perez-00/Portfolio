@@ -966,7 +966,8 @@ img {
         height: 100%;
         width: auto;
         margin: auto;
-        animation: test .5s ease-out;
+        animation: codeboyAnimation2 .5s ease-out;
+    
     }
 
     .fake-screen {
@@ -1007,9 +1008,14 @@ img {
         }
     }
 
-    @keyframes test {
+    @keyframes codeboyAnimation2 {
         0% {
             transform: translate(100px, 0);
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
         }
     }
 
