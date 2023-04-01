@@ -248,8 +248,9 @@ img {
     position: absolute;
     width: 100%;
     height: 100%;
-    perspective: 750px;
-    
+    /*perspective: 750px;
+    */
+    perspective: 60vh;
 }
 
 .game-box {
@@ -778,6 +779,42 @@ img {
 
 }
 
+.fake-screen {
+    position: absolute;
+    background-color: transparent;
+    width: 60%;
+    height: 25%;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -100;
+
+}
+
+.real-screen {
+    position: fixed;
+    background-color: transparent;
+    z-index: 101;
+}
+
+.zoom-into-gamescreen {
+    /*background-color: #e7e6dd;
+    */
+    background-color: #e7efff;
+    animation: scaleToFullScreen 2s ease;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes scaleToFullScreen {
+    100% {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
 
 
 @media screen and (max-width: 125vh) {
@@ -945,8 +982,6 @@ img {
     }
 
     .codeboy {
-    
-
         /*width: 100%;
         */
 
@@ -958,8 +993,6 @@ img {
         max-height: 60vh;
 
         background-color: transparent;
-    
-        
     }
 
     .codeboy-image {
@@ -970,43 +1003,6 @@ img {
     
     }
 
-    .fake-screen {
-        position: absolute;
-        background-color: transparent;
-        width: 40%;
-        height: 25%;
-        top: 23%;
-        left: 80%;
-        transform: translate(-100%, -50%);
-    
-    }
-
-    .real-screen {
-        position: fixed;
-        background-color: transparent;
-        width: 100px;
-        height: 100px;
-        left: 10px;
-        top: 10px;
-        z-index: 101;
-    }
-
-    .zoom-into-gamescreen {
-        background-color: #e7e6dd;
-        animation: scaleToFullScreen 2s ease;
-        animation-fill-mode: forwards;
-
-    
-    }
-
-    @keyframes scaleToFullScreen {
-        100% {
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-        }
-    }
 
     @keyframes codeboyAnimation2 {
         0% {

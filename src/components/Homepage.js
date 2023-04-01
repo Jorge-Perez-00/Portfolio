@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import '../css/Homepage.css'
+import { withRouter } from "./withRouter";
+
 
 import leftButtonImage from '../images/left-button.png'
 import rightButtonImage from '../images/right-button.png'
+
+
 
 
 
@@ -68,6 +72,8 @@ class Homepage extends Component {
         this.newGamePositionY = 0;
 
         this.inDropZone = false;
+
+        this.gameScreenRef = React.createRef(null);
     }
 
     updateGameDisplay = (event) => {
@@ -200,6 +206,15 @@ class Homepage extends Component {
                 devicePower: "-power-on",
             })
         },6750)
+
+        this.timeout3 = setTimeout(() => {
+            this.gameTransition();
+        },7500)
+
+        this.timeout4 = setTimeout(() => {
+            console.log("Navigate to Page")
+            this.props.navigate(`/${GAMES[this.state.insertGameID]}`)
+        },9600)
     }
 
    
@@ -325,6 +340,15 @@ class Homepage extends Component {
                     devicePower: "-power-on",
                 })
             }, 3750)
+
+            this.timeout2 = setTimeout(() => {
+                this.gameTransition();
+            },4500)
+
+            this.timeout3 = setTimeout(() => {
+                console.log("Navigate to Page")
+                this.props.navigate(`/${GAMES[this.state.insertGameID]}`)
+            }, 6600)
         }
         else {
             this.setState({
@@ -351,15 +375,21 @@ class Homepage extends Component {
     //
 
 
-    testFunction = (event) => {
-        const gameScreenPositionX = event.target.getBoundingClientRect().left;
-        const gameScreenPositionY = event.target.getBoundingClientRect().top;
-        console.log("X: ", gameScreenPositionX, "Y: ", gameScreenPositionY);
+    gameTransition = () => {
+        /*
+        console.log(this.gameScreenRef);
+        console.log(this.gameScreenRef.current.getBoundingClientRect().left);
+        console.log(this.gameScreenRef.current.getBoundingClientRect().top);
+        console.log(this.gameScreenRef.current.clientWidth);
+        console.log(this.gameScreenRef.current.clientHeight);
+        */
 
-        const screenWidth = event.currentTarget.offsetWidth; 
-        const screenHeight = event.currentTarget.offsetHeight;
+        const gameScreenPositionX = this.gameScreenRef.current.getBoundingClientRect().left;
+        const gameScreenPositionY = this.gameScreenRef.current.getBoundingClientRect().top;
 
-        console.log(screenWidth, " ", screenHeight);
+        const screenWidth = this.gameScreenRef.current.clientWidth;
+        const screenHeight = this.gameScreenRef.current.clientHeight;
+
         this.setState({
             largeGameScreen: true,
             gameScreenX: gameScreenPositionX,
@@ -368,6 +398,7 @@ class Homepage extends Component {
             gameScreenHeight: screenHeight,
         })
 
+    
     }
 
     render() {
@@ -497,12 +528,11 @@ class Homepage extends Component {
                 </div>
 
                
-                {/*<div 
+                <div 
                     style={this.state.largeGameScreen ? {position: 'fixed', left: `${this.state.gameScreenX}px`, top: `${this.state.gameScreenY}px`, width: `${this.state.gameScreenWidth}px`, height: `${this.state.gameScreenHeight}px`}  : null} 
                     className={`real-screen ${this.state.largeGameScreen ? 'zoom-into-gamescreen' : ""} `}  > 
 
                 </div>
-                        */}
 
 
                 <div className='container2'>
@@ -538,10 +568,10 @@ class Homepage extends Component {
                         }
                         <img className="codeboy-image" src={require(`../images/${this.state.color}-codeboy${this.state.devicePower !== null ? this.state.devicePower : ""}.png`)} alt="Codeboy" />
                         
-                        {/*<div
-                            className="fake-screen" 
-                            onClick={this.testFunction}>
-                        </div>*/}
+                        <div
+                            ref={this.gameScreenRef}
+                            className="fake-screen">
+                        </div>
                     
                     </div>
                 </div>
@@ -550,4 +580,4 @@ class Homepage extends Component {
     }
 }
 
-export default Homepage;
+export default withRouter(Homepage);

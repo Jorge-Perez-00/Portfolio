@@ -1,0 +1,62 @@
+
+
+.game-main-container {
+    background-color: #e7efff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+header {
+    /*position: sticky;
+    left: 0;
+    */
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    margin: none;
+    margin-top: 1.5rem;
+
+    animation: headerFadeIn .5s ease;
+}
+
+@keyframes headerFadeIn {
+    0% {
+        opacity: 0;
+        top: 0px;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+
+.homepage-button {
+    height: 100%;
+    width: max-content;
+    
+    margin-left: 1.5rem;
+    margin-right: auto;
+
+    cursor: pointer;
+    z-index: 100;
+    
+}
+
+.header-title {
+    height: 10rem;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.header-game-image {
+    height: 10rem;
+    width: max-content;
+    margin-left: auto;
+    margin-right: 1.5rem;
+}
