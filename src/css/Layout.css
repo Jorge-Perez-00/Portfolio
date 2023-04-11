@@ -5,27 +5,40 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 header {
-    /*position: sticky;
-    left: 0;
-    */
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 100%;
+    max-width: 1500px;
     height: 10rem;
     display: flex;
     justify-content: space-between;
-    margin: none;
+    margin: auto;
     margin-top: 1.5rem;
 
     animation: headerFadeIn .5s ease;
+    
+    scroll-margin: 1.5rem;
+
+    z-index: 1;
+    
+
+  
 }
 
 @keyframes headerFadeIn {
     0% {
         opacity: 0;
-        top: 0px;
+        top: 0;
+        transform: translate(-50%, -100%);
     }
     100% {
         opacity: 1;
@@ -42,21 +55,333 @@ header {
     margin-right: auto;
 
     cursor: pointer;
+    opacity: 1;
     z-index: 100;
     
 }
 
-.header-title {
-    height: 10rem;
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
 
 .header-game-image {
-    height: 10rem;
+    height: 9.5rem;
     width: max-content;
     margin-left: auto;
     margin-right: 1.5rem;
+    z-index: 100;
+}
+
+
+.main-art-container{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.main-page-title {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%,-50%);
+
+    height: 15vh;
+    width: 90vw;
+    z-index: 5;
+
+    opacity: 0;
+    animation: titleAnimation .75s ease .9s;
+    animation-fill-mode: forwards;
+}
+
+.main-art {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: 100vh;
+    width: calc(100vh * 20);
+
+    background-repeat: repeat-x;
+    background-size: contain;
+    image-rendering: pixelated;
+    
+    filter: blur(2.5rem);
+
+    animation: blurEffect .75s linear .15s, scrollAnimation2 60s linear 1.85s infinite;
+    animation-fill-mode: forwards;
+}
+
+.aboutme-art {
+    background-image: url('../images/aboutme-main-art.png');
+}
+
+.page-arrow-down {
+    position: absolute;
+    width: 17.5vw;
+    height: 17.5vw;
+    max-width: 10vh;
+    max-height: 10vh;
+
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    background-image: url('../images/show-button.png');
+    background-size: 100%;
+    
+    animation: arrowDownFadeIn 1.65s ease , arrowDownAnimation .5s ease-in-out 1.65s infinite;
+    animation-direction: alternate;
+    
+}
+
+@keyframes arrowDownFadeIn {
+    0% {
+        top: 100%;
+        opacity: 0;
+    }
+
+    80% {
+        top: 100%;
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+@keyframes arrowDownAnimation {
+    0% {
+        
+    }
+    100% {
+        top: 100%;
+        transform: translate(-50%, -100%);
+    }
+    
+}
+
+
+@keyframes scrollAnimation2 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(calc(-100vh * 5));
+    }
+}
+
+@keyframes titleAnimation {
+    0% {
+        top: 0;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+@keyframes blurEffect {
+    0% {
+        filter: blur(2.5rem);
+    }
+
+    100% {
+        filter: blur(0);
+    }
+}
+
+main {
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+
+}
+
+
+h2 {
+    /*
+    font-size: 5rem;
+    */
+
+    font-size: clamp(5rem, 4.6211rem + 1.6842vw, 6.2rem);
+
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 3.5rem;
+    margin: 1.5rem auto;
+
+    padding: 0 1rem;
+}
+
+p {
+    text-align: center;
+    
+    /*
+    font-size: 2.25rem;
+    */
+
+    /*
+    font-size: clamp(2.5rem, 2.1842rem + 1.4035vw, 3.5rem);
+    */
+    
+    font-size: clamp(2.25rem, 1.8553rem + 1.7544vw, 3.5rem);    
+    
+    inline-size: 90%;
+    margin-inline-start: 0px;
+    margin: auto;
+}
+
+
+/* CARDS WITH IMAGES STYLES */
+.cards-container {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+    width: 100%;
+    height: auto;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    box-sizing: border-box;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    
+
+    position: relative;
+    background-color: #e7e6dd;
+    outline: 1px solid black;
+    margin: 2rem;
+    
+    box-sizing: border-box;
+    
+
+
+    width: 90%;
+    max-width: 30rem;
+}
+
+.card-image {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    flex: 1;
+}
+
+.pixel-art-images {
+    image-rendering: pixelated;
+}
+
+.card-text-container {
+    flex: 1;
+}
+
+.card-text {
+    text-align: left;
+    font-size: 2.5rem;
+    padding-bottom: 1.75rem;
+}
+
+
+.move-up-content {
+    height: max-content;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.page-arrow-up {
+    width: 17.5vw;
+    height: 17.5vw;
+    max-width: 7.5vh;
+    max-height: 7.5vh;
+
+    margin: auto;
+    background-image: url('../images/hide-button.png');
+    background-size: 100%;
+
+    animation-direction: alternate;
+}
+
+
+.move-up-button {
+    background-color: #6bd7ee;
+    font-size: clamp(3.5rem, 3.1842rem + 1.4035vw, 4.5rem);    
+    font-family: inherit;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 1.25rem auto;
+    cursor: pointer;
+}
+
+.move-up-button:hover {
+    background-color: #272424;
+    color: #6bd7ee;
+}
+
+@keyframes arrowUpAnimation {
+    0% {
+
+    }
+
+    100% {
+
+    }
+    
+}
+
+
+
+
+/* HIDE HEADER MAIN TITLE IF SCREEN WIDTH IS LESS THAN 750px */
+@media screen and (max-width: 750px) {
+    .header-title {
+        display: none;
+    }
+}
+
+
+
+@media screen and (min-width: 481px) {
+    .card {
+        width: 75%;
+        max-width: 400px;
+    }
+
+    
+}
+
+@media screen and (min-width: 769px) {
+    
+    .cards-container {
+        flex-direction: column;
+        margin: auto;
+    }
+    
+    .card {
+        flex-direction: row;
+        width: 80%;
+        max-width: 600px;
+        margin: 2rem auto;
+    }
+    
 }
