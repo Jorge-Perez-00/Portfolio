@@ -28,7 +28,7 @@ header {
     
     scroll-margin: 1.5rem;
 
-    z-index: 1;
+    z-index: 100;
     
 
   
@@ -55,7 +55,7 @@ header {
     margin-right: auto;
 
     cursor: pointer;
-    opacity: 1;
+    opacity: 100;
     z-index: 100;
     
 }
@@ -71,6 +71,7 @@ header {
 
 
 .main-art-container{
+    position: relative;
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -92,7 +93,7 @@ header {
     animation-fill-mode: forwards;
 }
 
-.main-art {
+.main-art-layers {
     position: absolute;
     left: 0;
     top: 0;
@@ -104,14 +105,56 @@ header {
     background-size: contain;
     image-rendering: pixelated;
     
-    filter: blur(2.5rem);
+    margin: 0;
+    padding: 0;
 
+    filter: blur(2.5rem);
+}
+
+
+.layer-1 {
     animation: blurEffect .75s linear .15s, scrollAnimation2 60s linear 1.85s infinite;
     animation-fill-mode: forwards;
 }
 
+.layer-2 {
+    animation: blurEffect .75s linear .15s, scrollAnimation2 40s linear 1.85s infinite;
+    animation-fill-mode: forwards;
+}
+
+.top-layer-art-skills {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    transform: translate(-50%, -100%);
+
+    width: 115vmin;
+    height: 115vmin;
+
+    background-image: url('../images/computer-setup-art.png');
+    background-size: 100%;
+    image-rendering: pixelated;
+
+    filter: blur(2.5rem);
+    animation: blurEffect .75s linear .15s;
+    animation-fill-mode: forwards;
+
+    z-index: 7;
+}
+
+
 .aboutme-art {
     background-image: url('../images/aboutme-main-art.png');
+}
+
+.skills-art {
+    background-image: url('../images/skills-main-art.png');
+}
+
+.skills-art-layer-2 {
+    background-image: url('../images/skills-main-art-2.png'); 
+    z-index: 6;
 }
 
 .page-arrow-down {
@@ -124,6 +167,9 @@ header {
     top: 85%;
     left: 50%;
     transform: translate(-50%, 0);
+
+    margin: auto;
+    padding: 0;
 
     background-image: url('../images/show-button.png');
     background-size: 100%;
@@ -240,7 +286,7 @@ p {
 }
 
 
-/* CARDS WITH IMAGES STYLES */
+/* CARDS WITH IMAGES + TEXT STYLES */
 .cards-container {
     position: relative;
 
@@ -285,10 +331,6 @@ p {
     flex: 1;
 }
 
-.pixel-art-images {
-    image-rendering: pixelated;
-}
-
 .card-text-container {
     flex: 1;
 }
@@ -300,6 +342,96 @@ p {
 }
 
 
+/*CARDS WITH ONLY IMAGES*/
+
+.image-cards-container {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    /*width: 90%;
+    */
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    box-sizing: border-box;
+}
+
+.image-card {
+    position: relative;
+    outline: 1px solid black;
+    margin: 2rem 1rem;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+
+    /*
+    width: 90%;
+   */
+    width: 80vw;
+    height: 80vw;
+    max-width: 350px;
+    max-height: 350px;
+    perspective: 80rem;
+
+    
+}
+
+.image-card-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.75s;
+    transform-style: preserve-3d;
+
+}
+
+.image-card-front, .image-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    
+}
+
+.image-card:hover .image-card-face {
+    transform: rotateY(180deg);
+}
+
+
+.image-card-image {
+    width: 100%;
+    height: 100%;
+}
+
+.image-card-back {
+    color: aliceblue;
+    background-color: #2a2929;
+    transform: rotateY(180deg);
+}
+
+.image-card-title {
+    font-size: clamp(2.75rem, 1rem + 5vw, 3.5rem);
+}
+
+.image-card-text {
+    font-size: clamp(2rem, 0.5rem + 4vw, 2.75rem);
+}
+
+
+.pixel-art-images {
+    image-rendering: pixelated;
+}
+
+
+
+
 .move-up-content {
     height: max-content;
     width: max-content;
@@ -307,6 +439,7 @@ p {
     margin-right: auto;
     margin-top: 5rem;
     margin-bottom: 5rem;
+
 }
 
 .page-arrow-up {
@@ -352,22 +485,11 @@ p {
 
 
 
-/* HIDE HEADER MAIN TITLE IF SCREEN WIDTH IS LESS THAN 750px */
-@media screen and (max-width: 750px) {
-    .header-title {
-        display: none;
-    }
-}
-
-
-
 @media screen and (min-width: 481px) {
     .card {
         width: 75%;
         max-width: 400px;
     }
-
-    
 }
 
 @media screen and (min-width: 769px) {
