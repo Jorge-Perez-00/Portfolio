@@ -40,16 +40,15 @@ function Layout(props) {
                 <img src={homepageButtonImage} alt="homepage button" className='homepage-button' onClick={handleHomepageButtonClick} onMouseEnter={handleHomepageButtonHover} onMouseLeave={handleHomepageButtonLeave} />
                 {game && <img src={require(`../images/skyblue-game-${game}.png`)} alt="game image" className='header-game-image' />}
             </header>
+
+
             {game && 
                 <div className='main-art-container'>
                     <img src={require(`../images/title-${game}.png`)} alt="main-title" className='main-page-title' />
-                    <div className={`main-art-layers layer-1 ${game}-art`}>
-
-                    </div>
-
-                    <div className={`main-art-layers layer-2 ${game}-art-layer-2`}>
-
-                    </div>
+                    
+                    <div className={`main-art-layers layer-1 ${game}-art`}> </div>
+                    <div className={`main-art-layers layer-2 ${game}-art-layer-2`}></div>
+                    <div className={`main-art-layers layer-3 ${game}-art-layer-3`}></div>
 
                     {topFixedLayer && 
                         <div className={`top-layer-art-skills`}>
@@ -62,6 +61,8 @@ function Layout(props) {
                     </div>
                 </div>
             }
+
+
             <main>
                 {props.children}
 

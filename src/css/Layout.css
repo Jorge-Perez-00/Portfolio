@@ -122,6 +122,11 @@ header {
     animation-fill-mode: forwards;
 }
 
+.layer-3 {
+    animation: blurEffect .75s linear .15s, scrollAnimation2 20s linear 1.85s infinite;
+    animation-fill-mode: forwards;
+}
+
 .top-layer-art-skills {
     position: absolute;
     top: 100%;
@@ -155,6 +160,18 @@ header {
 .skills-art-layer-2 {
     background-image: url('../images/skills-main-art-2.png'); 
     z-index: 6;
+}
+
+.tictactoe-art {
+    background-image: url('../images/ttt-main-art.png');
+}
+
+.tictactoe-art-layer-2 {
+    background-image: url('../images/ttt-main-art-2.png');
+}
+
+.tictactoe-art-layer-3 {
+    background-image: url('../images/ttt-main-art-3.png');
 }
 
 .page-arrow-down {
@@ -248,23 +265,40 @@ main {
 
 }
 
+h1 {
+    text-align: center;
+
+    font-size: clamp(5rem, 4.1864rem + 2.5vw, 8rem);
+    inline-size: 90%;
+    margin: 5rem auto;
+}
+
 
 h2 {
-    /*
-    font-size: 5rem;
-    */
-
     font-size: clamp(5rem, 4.6211rem + 1.6842vw, 6.2rem);
 
     padding: 0;
     margin-bottom: 1rem;
 }
 
+.subtitle-left {
+    text-align: left;
+    margin-left: 7.5vw;
+    text-transform: uppercase;
+}
+
 h3 {
     font-size: 3.5rem;
     margin: 1.5rem auto;
-
     padding: 0 1rem;
+}
+
+h4 {
+    text-align: center;
+    font-size: 5rem;
+    margin: 2rem;
+    padding: 0;
+    font-weight: 100;
 }
 
 p {
@@ -342,6 +376,8 @@ p {
 }
 
 
+
+
 /*CARDS WITH ONLY IMAGES*/
 
 .image-cards-container {
@@ -380,6 +416,11 @@ p {
     perspective: 80rem;
 
     
+}
+
+.link-image-card:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
 }
 
 .image-card-face {
@@ -430,6 +471,24 @@ p {
 }
 
 
+
+/* PROJECT SCREENSHOT IMAGES*/
+
+.screenshots-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+}
+
+
+.screenshot-image {
+
+    width: 100%;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0;
+}
 
 
 .move-up-content {
