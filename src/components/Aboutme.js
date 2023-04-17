@@ -11,7 +11,7 @@ function Aboutme(props) {
 
             <div className="cards-container">
                 <div className="card">
-                    <img src={require(`../images/pixelated-me.png`)} alt="test" className="card-image pixel-art-images" />
+                    <img src={require(`../images/pixelated-me.png`)} alt="my pixelated character" className="card-image pixel-art-images" />
                     <div className="card-text-container">
                         <h3>Me</h3>
                         <p className="card-text">My name is Jorge Perez and I am 23 years old </p>
@@ -19,7 +19,7 @@ function Aboutme(props) {
                 </div>
 
                 <div className="card">
-                    <img src={require(`../images/pixelated-nyc.png`)} alt="test" className="card-image pixel-art-images" />
+                    <img src={require(`../images/pixelated-nyc.png`)} alt="NYC" className="card-image pixel-art-images" />
                     <div className="card-text-container">
                         <h3>Background</h3>
                         <p className="card-text">I am an aspiring Mexican-American programmer from New York City</p>
@@ -27,7 +27,7 @@ function Aboutme(props) {
                 </div>
 
                 <div className="card">
-                    <img src={require(`../images/pixelated-hunter-logo.png`)} alt="test" className="card-image pixel-art-images" />
+                    <img src={require(`../images/pixelated-hunter-logo.png`)} alt="Hunter College" className="card-image pixel-art-images" />
                     <div className="card-text-container">
                         <h3>CUNY Hunter College</h3>
                         <p className="card-text">I attended CUNY Hunter College between 2017-2022</p>
@@ -35,7 +35,7 @@ function Aboutme(props) {
                 </div>
 
                 <div className="card">
-                    <img src={require(`../images/computer-scientist-art.png`)} alt="test" className="card-image pixel-art-images" />
+                    <img src={require(`../images/computer-scientist-art.png`)} alt="Computer Science" className="card-image pixel-art-images" />
                     <div className="card-text-container">
                         <h3>Computer Scientist</h3>
                         <p className="card-text">I graduated from Hunter College with a Bachelor's of Arts degree in Computer Science</p>

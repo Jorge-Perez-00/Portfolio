@@ -74,6 +74,7 @@ class Homepage extends Component {
         this.inDropZone = false;
 
         this.gameScreenRef = React.createRef(null);
+    
     }
 
     updateGameDisplay = (event) => {
@@ -212,7 +213,7 @@ class Homepage extends Component {
         },7500)
 
         this.timeout4 = setTimeout(() => {
-            console.log("Navigate to Page")
+            //console.log("Navigate to Page")
             this.props.navigate(`/${GAMES[this.state.insertGameID]}`)
         },9600)
     }
@@ -256,10 +257,19 @@ class Homepage extends Component {
         //console.log(elementsBelow);
 
         let closestElement = null;
+        //console.log(elementsBelow);
         
-        if(elementsBelow.length !== 0) {
-            closestElement = elementsBelow[6].className;
+        if(elementsBelow.length > 6) {
+            if (elementsBelow.length !== 0) {
+                closestElement = elementsBelow[6].className;
+            }
         }
+        /*
+        else {
+            console.log("NO CLASSNAME!")
+        }
+        */
+    
 
         if(closestElement === 'codeboy-image') {
             //console.log("IN DROP ZONE !")
@@ -293,16 +303,31 @@ class Homepage extends Component {
             })
 
             if(this.state.touchScreen) {
-                console.log(event.touches);
-                this.gamePositionX = (event.touches[0].clientX - event.target.getBoundingClientRect().left) + event.target.getBoundingClientRect().left;
-                this.gamePositionY = (event.touches[0].clientY - event.target.getBoundingClientRect().top) + event.target.getBoundingClientRect().top;
-
                 //console.log("MOBILE")
+                //console.log(event.touches);
+
+                let middlePointOfGame = event.currentTarget.clientWidth / 2;
+                
+                let differenceX = (event.touches[0].clientX - event.currentTarget.getBoundingClientRect().left) - middlePointOfGame;
+                let differenceY = (event.touches[0].clientY - event.currentTarget.getBoundingClientRect().top) - middlePointOfGame;
+
+
+                this.gamePositionX = event.touches[0].clientX - differenceX;
+                this.gamePositionY = event.touches[0].clientY - differenceY;
             }
             else {
-                this.gamePositionX = (event.clientX - event.target.getBoundingClientRect().left) + event.target.getBoundingClientRect().left;
-                this.gamePositionY = (event.clientY - event.target.getBoundingClientRect().top) + event.target.getBoundingClientRect().top;
                 //console.log("DEVICE WITH MOUSE!")
+
+                let middlePointOfGame = event.currentTarget.clientWidth / 2;
+
+                let differenceX = (event.clientX - event.currentTarget.getBoundingClientRect().left) - middlePointOfGame;
+                let differenceY = (event.clientY - event.currentTarget.getBoundingClientRect().top) - middlePointOfGame;
+                
+
+                this.gamePositionX = event.clientX - differenceX;
+                this.gamePositionY = event.clientY - differenceY;
+
+              
             }
 
 
@@ -372,9 +397,7 @@ class Homepage extends Component {
         }
     }
 
-    //
-
-
+ 
     gameTransition = () => {
         /*
         console.log(this.gameScreenRef);
@@ -397,8 +420,10 @@ class Homepage extends Component {
             gameScreenWidth: screenWidth,
             gameScreenHeight: screenHeight,
         })
+    }
 
-    
+    handleChildElementMouseDown = (event) => {
+        event.stopPropagation();
     }
 
     render() {
@@ -476,8 +501,8 @@ class Homepage extends Component {
 
 
 
-                <div className='container1' >
-                    <div className='games-container'>
+                <div draggable="false" className='container1' >
+                    <div draggable='false' className='games-container'>
                         <button id={-1} className={`slideshowButtons left-button ${(this.state.gameClicked !== null || this.state.gameIsMoving !== null)  && 'arrows-temporary-hide'} ${this.state.largeGameClosing && "left-arrow-remount-animation"} `} onClick={this.updateGameDisplay}>
                             <img id={-1} src={leftButtonImage} alt="left button" className='buttonImages' />
                         </button>
@@ -488,7 +513,8 @@ class Homepage extends Component {
                         {GAMES.map((game,gameID) => 
                             <div draggable="false" key={this.state.color + gameID + 1} 
                                 style={(this.state.playGame || (this.state.gameIsMoving !== null && this.state.gameIsMoving !== gameID && this.state.isLongPress)) ? {zIndex: 0, opacity: 0.4} : null }  
-                                className={`game game${gameID} ${this.state.display === gameID ? "active " + this.state.animation : ""} `} >
+                                className={`game game${gameID} ${this.state.display === gameID ? "active " + this.state.animation : ""} `} 
+                                >
                                 <div 
                                     id={gameID}  
                                     style={this.state.gameIsMoving === gameID ? { left: `${this.state.gameLeft}px`, top: `${this.state.gameTop}px`} : null } 
@@ -496,18 +522,25 @@ class Homepage extends Component {
                                     onMouseDown={!this.state.touchScreen ? this.handleMouseDown : null}
                                     onTouchStart={this.handleMouseDown} 
                                     onMouseEnter={!this.state.touchScreen ? this.handleMouseEnter : null} 
-                                    onMouseLeave={!this.state.touchScreen ? this.handleMouseLeave : null} >
+                                    onMouseLeave={!this.state.touchScreen ? this.handleMouseLeave : null}
+                                    draggable="false">
 
                                     <img 
                                         className={`game-title ${this.state.gameHover === gameID && 'game-title-active'} ${this.state.gameIsMoving !== null && "hide-game-content"} ${(game === 'maze' || game === 'tictactoe' || game === 'codeboy') && 'project-title'}`} 
-                                        src={require(`../images/title-${game}.png`)} alt="game title" />
+                                        src={require(`../images/title-${game}.png`)} alt="game title"
+                                        draggable='false'
+                                        onMouseDown={this.handleChildElementMouseDown}
+                                        />
                                     <img 
                                         className={`game-arrow ${this.state.gameHover === gameID && 'game-arrow-active'} ${this.state.gameIsMoving !== null && "hide-game-content"} `} 
-                                        src={require(`../images/hide-button.png`)} alt="triangle" />
+                                        src={require(`../images/hide-button.png`)} alt="triangle"
+                                        draggable='false'
+                                        onMouseDown={this.handleChildElementMouseDown}
+                                        />
 
                                     <div draggable="false" id={gameID} className={`game-box ${this.state.gameHover === gameID && 'rotation-active'} ${this.state.gameIsMoving !== null && 'stop-rotation'}`} onClick={this.handleGameClick} > 
                                         <div draggable='false' className="game-face front" >
-                                            <img draggable='false' id={gameID}  loading='eager' className="game-image" src={require(`../images/${this.state.color}-game-${game}.png`)} alt="Game" />
+                                            <img draggable='false' id={gameID}  loading='eager' className="game-image" src={require(`../images/${this.state.color}-game-${game}.png`)} alt="Game"  />
                                         </div>
                                         <div draggable='false' className="game-face back" >
                                             <img draggable='false' id={gameID} className="game-back-image" src={require(`../images/${this.state.color}-game-back.png`)} alt="Game Back" />
@@ -566,7 +599,7 @@ class Homepage extends Component {
                             <img className="drop-zone-arrow" src={require(`../images/show-button.png`)} alt="" />
 
                         }
-                        <img className="codeboy-image" src={require(`../images/${this.state.color}-codeboy${this.state.devicePower !== null ? this.state.devicePower : ""}.png`)} alt="Codeboy" />
+                        <img draggable="false" className="codeboy-image" src={require(`../images/${this.state.color}-codeboy${this.state.devicePower !== null ? this.state.devicePower : ""}.png`)} alt="Codeboy" />
                         
                         <div
                             ref={this.gameScreenRef}
