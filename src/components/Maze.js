@@ -31,11 +31,13 @@ function Maze(props) {
 
 
             <h2 className="subtitle-left">Objective:</h2>
-            <p>When I started to plan and build this project the initial goal was to convert my maze reinforcement learning project 
-                from my capstone class into a web application with a UI because the project only executed through a terminal. 
-                After completing my reinforcement learning tic-tac-toe project I decided to challenge myself even more by implementing a 
-                gaming aspect to this maze project and a random maze generator component. My main focus was to improve my maze capstone 
-                project while continuing to teach myself web development.</p>
+            <p>When I started to plan and build this project the initial goal was to convert my maze reinforcement learning project from 
+                my capstone class into a web application with a UI because the project only executed through a terminal. After completing my 
+                reinforcement learning tic-tac-toe project I decided to challenge myself even more by implementing and adding a gaming aspect 
+                to this maze project and a random maze generator component. The purpose of the maze generator component would be so that the 
+                user can instantly generate a new random 30x30 maze. The ability to instantly generate a new maze will let the user view how 
+                an agent finds the exit of any 30x30 maze and will give the user new unique mazes everytime when playing the maze game modes. 
+                Overall my main focus was to improve my maze capstone project while continuing to teach myself web development.</p>
 
 
             <h2 className="subtitle-left">Tools:</h2>

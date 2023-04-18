@@ -184,16 +184,14 @@ header {
     z-index: 1;
 }
 
-/*
-.maze-art {
-    background-image: url('../images/maze-main-art.png');
 
+.codeboy-art {
+    background-image: url('../images/codeboy-main-art.png');
 }
 
-.maze-art-layer-2 {
-    background-image: url('../images/maze-main-art-2.png');
+.codeboy-art-layer-3 {
+    background-image: url('../images/codeboy-main-art-2.png');
 }
-*/
 
 
 .page-arrow-down {
@@ -557,19 +555,6 @@ p {
     background-color: #272424;
     color: #6bd7ee;
 }
-
-@keyframes arrowUpAnimation {
-    0% {
-
-    }
-
-    100% {
-
-    }
-    
-}
-
-
 
 
 @media screen and (min-width: 481px) {
