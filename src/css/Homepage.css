@@ -4,8 +4,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    display: block;
-    
+    display: block;  
     
 }
 
@@ -14,8 +13,8 @@ img {
     width: 10vmin;
     height: 10vmin;
 
-    max-width: 6vh;
-    max-height: 6vh;
+    max-width: 6dvh;
+    max-height: 6dvh;
 
     outline: none;
     padding: 0;
@@ -28,7 +27,6 @@ img {
 
 .disable-arrow-buttons  {
     opacity: 40%;
-    /*z-index: 0;*/
 }
 
 
@@ -128,7 +126,7 @@ img {
     width: 10%;
     height: 40%;
 
-    max-width: 5vh;
+    max-width: 5dvh;
     max-height: 80vw;
 
     top: 40%;
@@ -202,6 +200,7 @@ img {
 
     background-color: transparent;
     
+    touch-action: none;
 }
 
 .container2 {
@@ -224,8 +223,10 @@ img {
     height: 40vmin;
 
 
-    max-width: 20vh;
-    max-height: 20vh;
+    max-width: 20dvh;
+    max-height: 20dvh;
+
+    user-select: none;
 
     background-color: transparent;
     
@@ -240,8 +241,6 @@ img {
     height: 100%;
     cursor: pointer;
     z-index: 10;
-
-    
 }
 
 .game-scene {
@@ -250,7 +249,7 @@ img {
     height: 100%;
     /*perspective: 750px;
     */
-    perspective: 60vh;
+    perspective: 60dvh;
 
     user-select: none;
 }
@@ -266,31 +265,30 @@ img {
 }
 
 .game-face {
+    user-select: none;
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: none;
-
-
 }
 
 .front {
-    transform: rotateY(0deg) translateZ(min(4vmin, 2vh));
+    transform: rotateY(0deg) translateZ(min(4vmin, 2dvh));
     z-index: 10;
 }
 
 .back {
-    transform: rotateY(180deg) translateZ(min(4vmin, 2vh));
+    transform: rotateY(180deg) translateZ(min(4vmin, 2dvh));
 }
 
 .left {
     width: 20%;
-    transform: rotateY(-90deg) translateZ(min(4vmin, 2vh));
+    transform: rotateY(-90deg) translateZ(min(4vmin, 2dvh));
 }
 
 .right {
     width: 20%;
-    transform: rotateY(90deg) translateZ(min(36vmin, 18vh));
+    transform: rotateY(90deg) translateZ(min(36vmin, 18dvh));
 }
 
 @keyframes rotation {
@@ -389,8 +387,8 @@ img {
     width: 12vmin;
     height: 12vmin;
 
-    max-width: 6vh;
-    max-height: 6vh;
+    max-width: 6dvh;
+    max-height: 6dvh;
     background-color: transparent;
 
     padding: 0;
@@ -501,8 +499,8 @@ img {
     width: 62.5vw;
     height: 62.5vw;
 
-    max-width: 40vh;
-    max-height: 40vh;
+    max-width: 40dvh;
+    max-height: 40dvh;
 
     left: 50%;
     top: 50%;
@@ -529,23 +527,23 @@ img {
 }
 
 .large-game-front {
-    transform: rotateY(0deg) translateZ(min(6.25vw, 4vh));
+    transform: rotateY(0deg) translateZ(min(6.25vw, 4dvh));
     z-index: 100;
 }
 
 .large-game-back {
     background-color: none;
-    transform: rotateY(180deg) translateZ(min(6.25vw, 4vh));
+    transform: rotateY(180deg) translateZ(min(6.25vw, 4dvh));
 }
 
 .large-game-left {
     width: 20%;
-    transform: rotateY(-90deg) translateZ(min(6.25vw, 4vh));
+    transform: rotateY(-90deg) translateZ(min(6.25vw, 4dvh));
 }
 
 .large-game-right {
     width: 20%;
-    transform: rotateY(90deg) translateZ(min(56.25vw, 36vh));
+    transform: rotateY(90deg) translateZ(min(56.25vw, 36dvh));
 }
 
 
@@ -631,8 +629,8 @@ img {
     width: 20vmin;
     height: 20vmin;
 
-    max-width: 10vh;
-    max-height: 10vh;
+    max-width: 10dvh;
+    max-height: 10dvh;
 
     cursor: pointer;
 
@@ -682,8 +680,8 @@ img {
     height: 40vmin;
 
 
-    max-width: 20vh;
-    max-height: 20vh;
+    max-width: 20dvh;
+    max-height: 20dvh;
 
     background-color: transparent;
     /*z-index: 100;
@@ -701,7 +699,7 @@ img {
 
 @keyframes insertGameAnimation {
     0% {
-        top: -100vh;
+        top: -100dvh;
     }
 
     100% {
@@ -734,20 +732,12 @@ img {
 
     width: max-content;
     height: max-content;
-    /*
-    width: 70%;
-    height: 90%;
-
-    max-width: 40vh;
-        max-height: 60vh;
-    */
-
     
     width: 74.4vw;
     height: 120vw;
 
-    max-width: 34.1vh;
-    max-height: 55vh;
+    max-width: 34.1dvh;
+    max-height: 55dvh;
 
 
     background-color: transparent;
@@ -825,13 +815,13 @@ img {
         top: 0;
         left: 0;
         width: 100vw;
-        height: 100vh;
+        height: 100dvh;
     }
 }
 
 
 
-@media screen and (max-width: 125vh) {
+@media screen and (max-width: 125dvh) {
 
     .left-arrow-remount-animation {
         animation: leftArrowAnimation .5s ease-out;
@@ -892,14 +882,14 @@ img {
 
 
 
-@media screen and (min-width: 125vh) {
+@media screen and (min-width: 125dvh) {
     
     .arrow-buttons {
             width: 3.25vw;
             height: 3.25vw;
     
-            max-width: 5vh;
-            max-height: 5vh;
+            max-width: 5dvh;
+            max-height: 5dvh;
         }
 
     .colors-show-button {
@@ -961,7 +951,7 @@ img {
         width: 30%;
         height: 5%;
 
-        max-width: 50vh;
+        max-width: 50dvh;
         max-height: 3vw;
     }
 
@@ -982,7 +972,7 @@ img {
         width: 50%;
         height: 100%;
 
-        max-width: 100vh;
+        max-width: 100dvh;
         
     }
 
@@ -990,8 +980,8 @@ img {
         width: 35%;
         height: 100%;
 
-        max-width: 60vh;
-        max-height: 100vh;
+        max-width: 60dvh;
+        max-height: 100dvh;
         background-color: transparent;
         
     }
@@ -1002,10 +992,10 @@ img {
 
         width: 26.35vw;
         height: 42.5vw;
-        /*max-width: 60vh;
+        /*max-width: 60dvh;
         */
-        max-width: 37.2vh;
-        max-height: 60vh;
+        max-width: 37.2dvh;
+        max-height: 60dvh;
 
         background-color: transparent;
     }
@@ -1051,8 +1041,8 @@ img {
         width: 12.5vw;
         height: 12.5vw;
         
-        max-width: 20vh;
-        max-height: 20vh;
+        max-width: 20dvh;
+        max-height: 20dvh;
 
         background-color: transparent;
         margin: 7.5vmin 2.5vmin;
@@ -1113,21 +1103,21 @@ img {
 
 
     .front {
-        transform: rotateY(0deg) translateZ(min(1.25vw, 2vh));
+        transform: rotateY(0deg) translateZ(min(1.25vw, 2dvh));
     }
 
     .back {
-        transform: rotateY(180deg) translateZ(min(1.25vw, 2vh));
+        transform: rotateY(180deg) translateZ(min(1.25vw, 2dvh));
     }
 
     .left {
         width: 20%;
-        transform: rotateY(-90deg) translateZ(min(1.25vw, 2vh));
+        transform: rotateY(-90deg) translateZ(min(1.25vw, 2dvh));
     }
 
     .right {
         width: 20%;
-        transform: rotateY(90deg) translateZ(min(11.25vw, 18vh));
+        transform: rotateY(90deg) translateZ(min(11.25vw, 18dvh));
     }
     
 
@@ -1223,8 +1213,8 @@ img {
         width: 12.5vw;
         height: 12.5vw;
         
-        max-width: 20vh;
-        max-height: 20vh;
+        max-width: 20dvh;
+        max-height: 20dvh;
 
         background-color: transparent;
 
@@ -1245,7 +1235,7 @@ img {
 
     @keyframes insertGameAnimation2 {
         0% {
-            top: -100vh;
+            top: -100dvh;
         }
 
         100% {

@@ -8,6 +8,7 @@ function Aboutme(props) {
     return(
         <Layout game={"aboutme"}>
 
+            <h1>ABOUT ME</h1>
 
             <div className="cards-container">
                 <div className="card">

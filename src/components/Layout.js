@@ -10,6 +10,7 @@ function Layout(props) {
     const {game, topFixedLayer} = props;
     const navigate = useNavigate();
     const headerRef = useRef(null);
+    const mainRef = useRef(null);
 
     const [homepageButtonImage, setHomepageButtonImage] = useState(skyblueCodeboy_OFF);
 
@@ -30,6 +31,10 @@ function Layout(props) {
 
     function scrollToTop() {
         headerRef.current.scrollIntoView({behavior: 'smooth'});
+    }
+
+    function scrollToMain() {
+        mainRef.current.scrollIntoView({ behavior: 'smooth' });
     }
 
 
@@ -56,14 +61,14 @@ function Layout(props) {
                         </div>
                     }
 
-                    <div className='page-arrow-down'>
+                    <div className='page-arrow-down' onClick={scrollToMain}>
 
                     </div>
                 </div>
             }
 
 
-            <main>
+            <main ref={mainRef}>
                 {props.children}
 
                 <div className='move-up-content'>
@@ -71,7 +76,7 @@ function Layout(props) {
 
                     </div>
                     <button className='move-up-button' onClick={scrollToTop}>
-                        MOVE TO TOP
+                        SCROLL TO TOP
                     </button>
                 </div>
                 

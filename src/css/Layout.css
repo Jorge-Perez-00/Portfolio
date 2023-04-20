@@ -73,7 +73,7 @@ header {
 .main-art-container{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     margin: 0;
     padding: 0;
 }
@@ -84,7 +84,7 @@ header {
     top: 25%;
     transform: translate(-50%,-50%);
 
-    height: 15vh;
+    height: 15dvh;
     width: 90vw;
     z-index: 5;
 
@@ -98,8 +98,8 @@ header {
     left: 0;
     top: 0;
 
-    height: 100vh;
-    width: calc(100vh * 20);
+    height: 100dvh;
+    width: calc(100dvh * 20);
 
     background-repeat: repeat-x;
     background-size: contain;
@@ -198,8 +198,8 @@ header {
     position: absolute;
     width: 17.5vw;
     height: 17.5vw;
-    max-width: 10vh;
-    max-height: 10vh;
+    max-width: 10dvh;
+    max-height: 10dvh;
 
     top: 85%;
     left: 50%;
@@ -207,6 +207,7 @@ header {
 
     margin: auto;
     padding: 0;
+    cursor: pointer;
 
     background-image: url('../images/show-button.png');
     background-size: 100%;
@@ -253,7 +254,7 @@ header {
     }
 
     100% {
-        transform: translateX(calc(-100vh * 5));
+        transform: translateX(calc(-100dvh * 5));
     }
 }
 
@@ -283,6 +284,8 @@ main {
     width: 90%;
     max-width: 1500px;
     margin: auto;
+
+    scroll-margin: 5rem;
 
 }
 
@@ -530,8 +533,8 @@ p {
 .page-arrow-up {
     width: 17.5vw;
     height: 17.5vw;
-    max-width: 7.5vh;
-    max-height: 7.5vh;
+    max-width: 7.5dvh;
+    max-height: 7.5dvh;
 
     margin: auto;
     background-image: url('../images/hide-button.png');

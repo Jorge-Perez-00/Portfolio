@@ -3,7 +3,7 @@
 .container {
     position: relative;
     background-color: aliceblue;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
   
     overflow: hidden;
@@ -20,8 +20,8 @@
 
     width: 100vw;
     height: 100vw;
-    max-width: 60vh;
-    max-height: 60vh;
+    max-width: 60dvh;
+    max-height: 60dvh;
     background-image: url('../images/homescreen title.png');
     background-size: 100%;
     background-repeat: none;
@@ -67,8 +67,8 @@
 
     width: 40vw;
     height: 20vw;
-    max-width: 20vh;
-    max-height: 10vh;
+    max-width: 20dvh;
+    max-height: 10dvh;
 
     background-image: url('../images/homescreen start.png');
     background-size: 100%;
@@ -115,11 +115,11 @@
     transform: translate(0%, -50%);
 
 
-    height: 25vh;
-    width: 25vh;
+    height: 25dvh;
+    width: 25dvh;
 
     background-image: url('../images/sprite sheet.png');
-    background-size: auto 50vh;
+    background-size: auto 50dvh;
     background-position: 0vh 0vh;
     image-rendering: pixelated;
     animation: walk 1.1s steps(6) 1.5s infinite;
@@ -129,7 +129,7 @@
 
 @keyframes walk {
     100% {
-        background-position: calc(25vh * -6) 0;
+        background-position: calc(25dvh * -6) 0;
     }
 }
 
@@ -145,7 +145,7 @@
 
     animation: singleStep 2s steps(1), riseToMiddle 2s ease;
     animation-fill-mode: forwards;
-    background-position: 0 -25vh;
+    background-position: 0 -25dvh;
 
     
 
@@ -160,7 +160,7 @@
 
 @keyframes singleStep {
     100% {
-        background-position: -25vh -25vh;
+        background-position: -25dvh -25dvh;
     }
 }
 
@@ -177,7 +177,7 @@
 
 .main-layer-container{
     position: relative;
-    height: 100vh;
+    height: 100dvh;
     
 }
 
@@ -187,8 +187,8 @@
     top: 0;
     left: 0;
 
-    height: 100vh;
-    width: calc(100vh * 16);
+    height: 100dvh;
+    width: calc(100dvh * 16);
 
     background-repeat: repeat-x;
     background-size: contain;
@@ -241,6 +241,6 @@
     }
 
     100% {
-        transform: translateX(calc(-100vh * 4));
+        transform: translateX(calc(-100dvh * 4));
     }
 }

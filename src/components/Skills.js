@@ -7,6 +7,8 @@ function Skills(props) {
     return (
         <Layout game={"skills"} topFixedLayer={true}>
 
+            <h1>SKILLS & TOOLS</h1>
+
             <div className="image-cards-container">
                 <div className="image-card">
                     <div className="image-card-face">

@@ -58,6 +58,16 @@ function Codeboy(props) {
                     <img src={require(`../images/reactjs-art.png`)} alt="reactjs" className="image-card-image pixel-art-images" />
                 </div>
             </div>
+
+            <h2 className="subtitle-left">Github Repo:</h2>
+
+            <div className="image-cards-container">
+                <div className="image-card link-image-card">
+                    <a href="https://github.com/Jorge-Perez-00/Portfolio" target="_blank" rel="noreferrer noopener" >
+                        <img src={require(`../images/github-art.png`)} alt="github" className="image-card-image pixel-art-images" />
+                    </a>
+                </div>
+            </div>
         
         </Layout>
 

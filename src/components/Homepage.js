@@ -399,13 +399,6 @@ class Homepage extends Component {
 
  
     gameTransition = () => {
-        /*
-        console.log(this.gameScreenRef);
-        console.log(this.gameScreenRef.current.getBoundingClientRect().left);
-        console.log(this.gameScreenRef.current.getBoundingClientRect().top);
-        console.log(this.gameScreenRef.current.clientWidth);
-        console.log(this.gameScreenRef.current.clientHeight);
-        */
 
         const gameScreenPositionX = this.gameScreenRef.current.getBoundingClientRect().left;
         const gameScreenPositionY = this.gameScreenRef.current.getBoundingClientRect().top;
