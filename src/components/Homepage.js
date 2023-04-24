@@ -11,7 +11,7 @@ import rightButtonImage from '../images/right-button.png'
 
 
 
-const GAMES = ['aboutme', 'skills', 'links', 'tictactoe', 'maze', 'codeboy']
+const GAMES = ['aboutme', 'skills', 'tictactoe', 'maze', 'codeboy']
 
 
 
@@ -82,9 +82,9 @@ class Homepage extends Component {
 
         let newDisplay = this.state.display + number;
         if (newDisplay === -1) {
-            newDisplay = 5;
+            newDisplay = 4;
         }
-        else if (newDisplay === 6) {
+        else if (newDisplay === 5) {
             newDisplay = 0;
         }
 

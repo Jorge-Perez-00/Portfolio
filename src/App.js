@@ -7,7 +7,6 @@ import Homepage from './components/Homepage';
 import Homescreen from './components/Homescreen'
 import Aboutme from './components/Aboutme'
 import Skills from './components/Skills';
-import Links from './components/Links';
 import Tictactoe from './components/Tictactoe';
 import Maze from './components/Maze';
 import Codeboy from './components/Codeboy';
@@ -55,7 +54,6 @@ class App extends Component{
           <Route path="/home" element={<Homepage/>}/>
           <Route path="/aboutme" element={<Aboutme/>}/>
           <Route path="/skills" element={<Skills/>}/>
-          <Route path="/links" element={<Links/>}/>
           <Route path="/tictactoe" element={<Tictactoe/>}/>
           <Route path="/maze" element={<Maze/>}/>
           <Route path="/codeboy" element={<Codeboy/>}/>

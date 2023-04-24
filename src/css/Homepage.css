@@ -1024,7 +1024,10 @@ img {
 
     .games-container {
         display: grid;
+        /*
         grid-template-columns: auto auto auto;
+        */
+        grid-template-columns: repeat(6, 1fr);
 
         transform: translate(-50%, -50%);
         width: auto;
@@ -1038,6 +1041,8 @@ img {
     .game {
         display: block;
 
+        grid-column: span 2;
+
         width: 12.5vw;
         height: 12.5vw;
         
@@ -1047,6 +1052,20 @@ img {
         background-color: transparent;
         margin: 7.5vmin 2.5vmin;
 
+    }
+
+    /* ABOUT ME GAME */
+    .game0 {
+        grid-column: 2 / 4;
+        margin: 7.5vmin auto;
+        margin-right: 2.5vmin;
+    }
+
+    /* SKILLS GAME */
+    .game1 {
+        grid-column: 4 / 6;
+        margin: 7.5vmin auto;
+        margin-left: 2.5vmin;
     }
 
     .game-scene {

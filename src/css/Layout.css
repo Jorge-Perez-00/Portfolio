@@ -348,6 +348,23 @@ p {
     margin: 3rem auto;
 }
 
+.download-button {
+    display: inline-block;
+    
+    font-size: clamp(3.5rem, 3rem + 1.5vw, 5rem);
+
+    margin: 3rem auto;
+    padding: .5rem;
+    background-color: transparent;
+    border: .25rem solid black;
+    text-decoration: none;
+}
+
+.download-button:hover {
+    background-color: #272424;
+    color: #6bd7ee;
+}
+
 
 /* CARDS WITH IMAGES + TEXT STYLES */
 .cards-container {
@@ -557,6 +574,12 @@ p {
 .move-up-button:hover {
     background-color: #272424;
     color: #6bd7ee;
+}
+
+
+.resume-image {
+    max-width: 1000px;
+    margin: auto;
 }
 
 
