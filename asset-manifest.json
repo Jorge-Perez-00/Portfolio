@@ -1,19 +1,25 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.a6c8b082.css",
-    "main.js": "/Portfolio/static/js/main.4f9b2897.js",
+    "main.css": "/Portfolio/static/css/main.72d7e915.css",
+    "main.js": "/Portfolio/static/js/main.4afc8a39.js",
     "static/js/787.3aeecc06.chunk.js": "/Portfolio/static/js/787.3aeecc06.chunk.js",
+    "static/media/resume-image.png": "/Portfolio/static/media/resume-image.e6f67a5ce9c8f5404f89.png",
     "static/media/sidewalk layer.png": "/Portfolio/static/media/sidewalk layer.24255df88f8fad02faae.png",
     "static/media/sky layer.png": "/Portfolio/static/media/sky layer.223d894d283be57d2245.png",
     "static/media/ttt-screenshot-3.png": "/Portfolio/static/media/ttt-screenshot-3.a3e04b029e7f065018d3.png",
     "static/media/codeboy-main-art.png": "/Portfolio/static/media/codeboy-main-art.eceeddac31e9899ad694.png",
+    "static/media/dragdrop-animation-horizontal.gif": "/Portfolio/static/media/dragdrop-animation-horizontal.2c0c0393bbb435152f15.gif",
+    "static/media/my-resume.pdf": "/Portfolio/static/media/my-resume.7594b09853b0f6f15ff7.pdf",
     "static/media/buildings layer.png": "/Portfolio/static/media/buildings layer.4b4c35ff9219bf1a1aed.png",
     "static/media/maze-screenshot-2.png": "/Portfolio/static/media/maze-screenshot-2.b680f5c0867ccc31ba4e.png",
     "static/media/maze-screenshot-4.png": "/Portfolio/static/media/maze-screenshot-4.e5ca8b863b0e17e963ff.png",
     "static/media/maze-screenshot-1.png": "/Portfolio/static/media/maze-screenshot-1.e17cb2fb0a74c535f12e.png",
+    "static/media/onclick-animation-horizontal.gif": "/Portfolio/static/media/onclick-animation-horizontal.29befb37f3266efb06c6.gif",
     "static/media/lightpost layer.png": "/Portfolio/static/media/lightpost layer.76e55930df634c1906f1.png",
+    "static/media/dragdrop-animation-vertical.gif": "/Portfolio/static/media/dragdrop-animation-vertical.436914f30304adbaa1dc.gif",
     "static/media/maze-screenshot-3.png": "/Portfolio/static/media/maze-screenshot-3.0c68c50e44cd2647b195.png",
     "static/media/maze-screenshot-5.png": "/Portfolio/static/media/maze-screenshot-5.547b12a60f36aeeab757.png",
+    "static/media/onclick-animation-vertical.gif": "/Portfolio/static/media/onclick-animation-vertical.3c639bc25b1b43779c17.gif",
     "static/media/ttt-screenshot-2.png": "/Portfolio/static/media/ttt-screenshot-2.36cc9ce6419f7fe4ac35.png",
     "static/media/codeboy-main-art-2.png": "/Portfolio/static/media/codeboy-main-art-2.47f3e4d7614fcb07642e.png",
     "static/media/ttt-screenshot-1.png": "/Portfolio/static/media/ttt-screenshot-1.9162af05ff91af3b9f87.png",
@@ -98,12 +104,12 @@
     "static/media/yellow-game.png": "/Portfolio/static/media/yellow-game.3fcb2e8d6ae66ecf910a.png",
     "static/media/normal-game.png": "/Portfolio/static/media/normal-game.ceae515ee260ef333c79.png",
     "index.html": "/Portfolio/index.html",
-    "main.a6c8b082.css.map": "/Portfolio/static/css/main.a6c8b082.css.map",
-    "main.4f9b2897.js.map": "/Portfolio/static/js/main.4f9b2897.js.map",
+    "main.72d7e915.css.map": "/Portfolio/static/css/main.72d7e915.css.map",
+    "main.4afc8a39.js.map": "/Portfolio/static/js/main.4afc8a39.js.map",
     "787.3aeecc06.chunk.js.map": "/Portfolio/static/js/787.3aeecc06.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6c8b082.css",
-    "static/js/main.4f9b2897.js"
+    "static/css/main.72d7e915.css",
+    "static/js/main.4afc8a39.js"
   ]
 }
