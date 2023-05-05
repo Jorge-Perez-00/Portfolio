@@ -64,6 +64,8 @@
     margin: 0 auto;
     margin-top: auto;
 
+    filter: brightness(.8);
+
 }
 
 .download-resume-button {

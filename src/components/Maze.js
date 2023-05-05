@@ -9,7 +9,7 @@ function Maze(props) {
             <h1>Reinforcement Learning Maze</h1>
             <h4>2023</h4>
 
-            <h2 className="subtitle-left" >Overview:</h2>
+            <h2 className="subtitle" >Overview</h2>
             <p>This is a web application mainly focused on mazes. In the application you are able to enter 4 different maze modes. 
                 The main mode is a reinforcement learning maze mode where the user can view an animated visualization of how an agent 
                 learns to find the best path in any 30x30 maze by using reinforcement learning in real time. In addition to the 
@@ -30,7 +30,7 @@ function Maze(props) {
             </div>
 
 
-            <h2 className="subtitle-left">Objective:</h2>
+            <h2 className="subtitle">Objective</h2>
             <p>When I started to plan and build this project the initial goal was to convert my maze reinforcement learning project from 
                 my capstone class into a web application with a UI because the project only executed through a terminal. After completing my 
                 reinforcement learning tic-tac-toe project I decided to challenge myself even more by implementing and adding a gaming aspect 
@@ -40,7 +40,7 @@ function Maze(props) {
                 Overall my main focus was to improve my maze capstone project while continuing to teach myself web development.</p>
 
 
-            <h2 className="subtitle-left">Tools:</h2>
+            <h2 className="subtitle">Tools</h2>
             <div className="image-cards-container">
                 <div className="image-card">
                     <img src={require(`../images/javascript-art.png`)} alt="javascript" className="image-card-image pixel-art-images" />
@@ -60,7 +60,7 @@ function Maze(props) {
             </div>
 
 
-            <h2 className="subtitle-left">Github Repo and Demo:</h2>
+            <h2 className="subtitle">Github Repo & Demo</h2>
 
             <div className="image-cards-container">
                 <div className="image-card link-image-card">

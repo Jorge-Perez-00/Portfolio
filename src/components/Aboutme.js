@@ -45,7 +45,7 @@ function Aboutme(props) {
             </div>
 
             <div>
-                <h2>About Me</h2>
+                <h2 className="subtitle">Jorge Perez</h2>
                 <p>Hello World! My name is Jorge Perez. I am a 23 year old computer programmer from New York City. I graduated from Hunter College 
                     in 2022 with a bachelor's degree of Arts in Computer Science. In my spare time I develop and build projects while challenging 
                     myself to learn new programming skills and new programming techniques. I enjoy combining my creativity skills and programming 
@@ -54,7 +54,7 @@ function Aboutme(props) {
                     software engineer or frontend developer where I can challenge myself and continue to grow as a programmer.</p> 
             </div>
 
-            <h2 className="subtitle-left">Github Repo & Linkedin:</h2>
+            <h2 className="subtitle">Github & Linkedin</h2>
 
             <div className="image-cards-container">
                 <div className="image-card link-image-card">
@@ -70,7 +70,7 @@ function Aboutme(props) {
                 </div>
             </div>
 
-            <h2 className="subtitle-left">Resume:</h2>
+            <h2 className="subtitle">Resume</h2>
 
             <img src={require(`../resume/resume-image.png`)} alt="resume" className="resume-image" />
             <a href={require("../resume/my-resume.pdf")} download="jorge-perez-resume" target="_blank" className="download-button">DOWNLOAD</a>

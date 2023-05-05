@@ -10,7 +10,7 @@ function Tictactoe(props) {
             <h1>Reinforcement Learning <br /> Tic-Tac-Toe</h1>
             <h4>2022 - 2023</h4>
         
-            <h2 className="subtitle-left" >Overview:</h2>
+            <h2 className="subtitle" >Overview</h2>
             <p>This project is a tic-tac-toe game where you play against an agent that has played millions of tic-tac-toe games and learned the 
                 best moves in each and every possible game of tic-tac-toe. The agent learns to play tic-tac-toe through a machine learning training method called reinforcement learning. 
                 The agent you play against in this project has already been trained beforehand. In the game you are able to play as either the X player or the O player and you are able to face 3 different agents 
@@ -25,11 +25,11 @@ function Tictactoe(props) {
 
             
             
-            <h2 className="subtitle-left">Objective:</h2>
+            <h2 className="subtitle">Objective</h2>
             <p>This project was originally developed with C++ in my capstone class in college and only executed through a terminal. As a way to teach myself web development and building web applications 
                 I decided to improve this project by building a much more exciting and engaging UI with React JS and making it accessible to many users online.</p>
             
-            <h2 className="subtitle-left">Tools:</h2>
+            <h2 className="subtitle">Tools</h2>
             <div className="image-cards-container">
                 <div className="image-card">
                     <img src={require(`../images/javascript-art.png`)} alt="javascript" className="image-card-image pixel-art-images" />                  
@@ -45,7 +45,7 @@ function Tictactoe(props) {
                 </div>
             </div>
 
-            <h2 className="subtitle-left">Github Repo and Demo:</h2>
+            <h2 className="subtitle">Github Repo & Demo</h2>
 
             <div className="image-cards-container">
                 <div className="image-card link-image-card">

@@ -314,6 +314,14 @@ h2 {
     text-transform: uppercase;
 }
 
+.subtitle {
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
 h3 {
     font-size: 3.5rem;
     margin: 1.5rem auto;
