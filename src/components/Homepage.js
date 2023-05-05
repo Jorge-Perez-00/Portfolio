@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import '../css/Homepage.css'
 import { withRouter } from "./withRouter";
 
+import Info from "./Info";
+import Links from "./Links";
+
 
 import leftButtonImage from '../images/left-button.png'
 import rightButtonImage from '../images/right-button.png'
@@ -60,6 +63,9 @@ class Homepage extends Component {
             gameScreenWidth: null,
             gameScreenHeight: null,
 
+
+            showLinks: false,
+            showResume: false,
         }
 
 
@@ -357,23 +363,40 @@ class Homepage extends Component {
             this.setState({
                 hideGameAfterDropInZone: true,
                 inDropZone: false,
-                insertGame: true,
+                //insertGame: true,
+                devicePower: "-power-on"
             })
 
+            this.timeout = setTimeout(() => {
+                this.gameTransition();
+            }, 500);
+
+            this.timeout2 = setTimeout(() => {
+                this.props.navigate(`/${GAMES[this.state.insertGameID]}`)
+            }, 2600)
+
+            /* SWITCH CODEBOY FROM OFF TO ON */
+            /*
             this.timeout = setTimeout(() => {
                 this.setState({
                     devicePower: "-power-on",
                 })
             }, 3750)
+            */
 
+            /* GAME PAGE TRANSITION */
+            /*
             this.timeout2 = setTimeout(() => {
                 this.gameTransition();
             },4500)
+            */
 
+            /* NAVIGATE TO GAME PAGE */
+            /*
             this.timeout3 = setTimeout(() => {
-                console.log("Navigate to Page")
                 this.props.navigate(`/${GAMES[this.state.insertGameID]}`)
             }, 6600)
+            */
         }
         else {
             this.setState({
@@ -428,7 +451,9 @@ class Homepage extends Component {
         return (
             <div className={`main-container bg-${this.state.color}`}>
 
-
+                <Info disable={this.state.disableAllFeatures} hide={(this.state.playGame || (this.state.gameIsMoving !== null && this.state.isLongPress))} />
+                
+                <Links disable={this.state.disableAllFeatures} hide={(this.state.playGame || (this.state.gameIsMoving !== null && this.state.isLongPress))} />
                 
             
                 <div className={`color-buttons-container ${this.state.colorButtons}`}>
@@ -441,12 +466,12 @@ class Homepage extends Component {
                     <div id="purple" className="color-button color-purple" onClick={this.setColor}></div>
                     <div id="pink" className="color-button color-pink" onClick={this.setColor}></div>
 
-                    <button id={"hide"} className={`arrow-buttons colors-hide-button ${(this.state.playGame || (this.state.gameIsMoving !== null && this.state.isLongPress)) && "disable-arrow-buttons"} ` } onClick={this.handleColorButtons}>
+                    <button id={"hide"} className={`arrow-buttons colors-hide-button ${(this.state.playGame || (this.state.gameIsMoving !== null && this.state.isLongPress)) && "disable-content"} ` } onClick={this.handleColorButtons}>
                     </button>
                 </div>
                 
                 {this.state.colorButtons === "hide" && 
-                    <button id={"show"} className={`arrow-buttons colors-show-button ${(this.state.playGame || (this.state.gameIsMoving !== null && this.state.isLongPress)) && "disable-arrow-buttons"} `} onClick={this.handleColorButtons}>
+                    <button id={"show"} className={`arrow-buttons colors-show-button ${(this.state.playGame || (this.state.gameIsMoving !== null && this.state.isLongPress)) && "disable-content"} `} onClick={this.handleColorButtons}>
                     </button> 
                 }
                   
@@ -523,12 +548,14 @@ class Homepage extends Component {
                                         src={require(`../images/title-${game}.png`)} alt="game title"
                                         draggable='false'
                                         onMouseDown={this.handleChildElementMouseDown}
+                                        onTouchStart={this.handleChildElementMouseDown}
                                         />
                                     <img 
                                         className={`game-arrow ${this.state.gameHover === gameID && 'game-arrow-active'} ${this.state.gameIsMoving !== null && "hide-game-content"} `} 
                                         src={require(`../images/hide-button.png`)} alt="triangle"
                                         draggable='false'
                                         onMouseDown={this.handleChildElementMouseDown}
+                                        onTouchStart={this.handleChildElementMouseDown}
                                         />
 
                                     <div draggable="false" id={gameID} className={`game-box ${this.state.gameHover === gameID && 'rotation-active'} ${this.state.gameIsMoving !== null && 'stop-rotation'}`} onClick={this.handleGameClick} > 

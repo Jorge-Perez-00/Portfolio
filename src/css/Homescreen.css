@@ -58,7 +58,7 @@
     }
     
 }
-
+/*
 .homescreen-start-button {
     position: absolute;
     top: 40%;
@@ -81,9 +81,51 @@
     animation: dropDownButton 1.4s ease-out;
     animation-fill-mode: forwards;
 }
+*/
 
 
-.hide-start-button {
+/**/
+
+.homescreen-buttons-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 40vw;
+    height: 20vw;
+    max-width: 20dvh;
+    max-height: 10dvh;
+
+    z-index: 119;
+
+    animation: dropDownButton 1.4s ease-out;
+    animation-fill-mode: forwards;
+
+}
+
+.homescreen-start-button {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../images/homescreen start.png');
+    background-size: 100%;
+    background-repeat: none;
+    background-color: #e7efff;
+
+
+    cursor: pointer;
+}
+
+
+
+
+
+.hide-buttons-container {
     display: none;
 }
 
@@ -107,6 +149,47 @@
 .homescreen-start-button:hover {
     background-color: rgb(125, 225, 255);
 }
+
+
+
+.links-container {
+    display: flex;
+    position: absolute;
+    height: 55%;
+    width: max-content;
+    margin: auto;
+    padding: 0;
+
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    
+    opacity: 0;
+    animation: linksAnimation .5s ease 1.4s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes linksAnimation {
+    0% {
+        top: 100;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.links {
+    height: 100%;
+    width: auto;
+    cursor: pointer;
+    margin: .5vmin;
+    border-radius: 1vmin;
+}
+
+.links:hover {
+    transform: scale(1.15);
+}
+
 
 .character {
     position: absolute;
@@ -244,3 +327,17 @@
         transform: translateX(calc(-100dvh * 4));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

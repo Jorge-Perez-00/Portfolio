@@ -65,7 +65,7 @@ function Aboutme(props) {
 
                 <div className="image-card link-image-card">
                     <a href="https://www.linkedin.com/in/jperez99/" target="_blank" rel="noreferrer noopener" >
-                        <img src={require(`../images/linkedin-art.png`)} alt="demo" className="image-card-image pixel-art-images" />
+                        <img src={require(`../images/linkedin-art.png`)} alt="linkedin" className="image-card-image pixel-art-images" />
                     </a>
                 </div>
             </div>

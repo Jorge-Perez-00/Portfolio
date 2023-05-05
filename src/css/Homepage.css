@@ -25,7 +25,7 @@ img {
     background-size: 100%;
 }
 
-.disable-arrow-buttons  {
+.disable-content  {
     opacity: 40%;
 }
 
@@ -118,6 +118,9 @@ img {
 .main-container.bg-pink {
     background-image: linear-gradient(to right bottom, #121212, #312d3b, #564967, #826593, #b482c0, #ca8bd2, #e294e3, #fa9cf3, #f693ef, #f28beb, #ed82e6, #e979e2);
 }
+
+
+
 
 .color-buttons-container {
     position: absolute;
@@ -783,6 +786,8 @@ img {
 
 }
 
+/* GAME PAGE NAVIGATION */
+
 .fake-screen {
     position: absolute;
     background-color: transparent;
@@ -802,8 +807,6 @@ img {
 }
 
 .zoom-into-gamescreen {
-    /*background-color: #e7e6dd;
-    */
     background-color: #e7efff;
     animation: scaleToFullScreen 2s ease;
     animation-fill-mode: forwards;
@@ -966,6 +969,7 @@ img {
         display: flex;
         
     }
+
 
     .container1 {
 
@@ -1262,26 +1266,5 @@ img {
         }
 
     }
-
-    /*
-    .drop-zone-arrow {
-        position: absolute;
-        height: 15%;
-        width: 15%;
-
-        left: 50%;
-        top: 0%;
-
-        transform: translate(-50%, -100%);
-        animation: dropZoneAnimation 1.2s ease-in-out 0s infinite;
-    }
-
-    @keyframes dropZoneAnimation {
-        0% {
-            transform: translate(-50%, -200%);
-        }
-        
-    }
-    */
 
 }
