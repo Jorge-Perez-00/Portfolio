@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.455911ba.css",
-    "main.js": "/Portfolio/static/js/main.1302e762.js",
+    "main.css": "/Portfolio/static/css/main.d6e13b45.css",
+    "main.js": "/Portfolio/static/js/main.f6d80c95.js",
     "static/js/787.3aeecc06.chunk.js": "/Portfolio/static/js/787.3aeecc06.chunk.js",
     "static/media/resume-image.png": "/Portfolio/static/media/resume-image.e6f67a5ce9c8f5404f89.png",
     "static/media/sidewalk layer.png": "/Portfolio/static/media/sidewalk layer.24255df88f8fad02faae.png",
@@ -21,6 +21,7 @@
     "static/media/maze-screenshot-5.png": "/Portfolio/static/media/maze-screenshot-5.547b12a60f36aeeab757.png",
     "static/media/onclick-animation-vertical.gif": "/Portfolio/static/media/onclick-animation-vertical.3c639bc25b1b43779c17.gif",
     "static/media/ttt-screenshot-2.png": "/Portfolio/static/media/ttt-screenshot-2.36cc9ce6419f7fe4ac35.png",
+    "static/media/singlepage-main-art.png": "/Portfolio/static/media/singlepage-main-art.3e62201d521416221ace.png",
     "static/media/codeboy-main-art-2.png": "/Portfolio/static/media/codeboy-main-art-2.47f3e4d7614fcb07642e.png",
     "static/media/ttt-screenshot-1.png": "/Portfolio/static/media/ttt-screenshot-1.9162af05ff91af3b9f87.png",
     "static/media/red-codeboy.png": "/Portfolio/static/media/red-codeboy.943b45b81acd775882af.png",
@@ -104,12 +105,12 @@
     "static/media/yellow-game.png": "/Portfolio/static/media/yellow-game.3fcb2e8d6ae66ecf910a.png",
     "static/media/normal-game.png": "/Portfolio/static/media/normal-game.ceae515ee260ef333c79.png",
     "index.html": "/Portfolio/index.html",
-    "main.455911ba.css.map": "/Portfolio/static/css/main.455911ba.css.map",
-    "main.1302e762.js.map": "/Portfolio/static/js/main.1302e762.js.map",
+    "main.d6e13b45.css.map": "/Portfolio/static/css/main.d6e13b45.css.map",
+    "main.f6d80c95.js.map": "/Portfolio/static/js/main.f6d80c95.js.map",
     "787.3aeecc06.chunk.js.map": "/Portfolio/static/js/787.3aeecc06.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.455911ba.css",
-    "static/js/main.1302e762.js"
+    "static/css/main.d6e13b45.css",
+    "static/js/main.f6d80c95.js"
   ]
 }
