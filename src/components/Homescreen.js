@@ -76,9 +76,13 @@ function Homescreen(props) {
             </div>
             
 
+            
             <div className='character'>
 
             </div>
+
+
+
 
             <div className="main-layer-container" >
                 <div className={`layers light-post-layer ${startClicked ? 'stop-infinite-scrolling' : null}  `} >
@@ -94,8 +98,8 @@ function Homescreen(props) {
                 <div className={`layers buildings-layer ${startClicked ? 'stop-infinite-scrolling' : null}`}>
 
                 </div>
-            </div>     
-
+            </div>
+            
            
 
         </div>
