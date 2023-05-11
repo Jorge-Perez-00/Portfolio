@@ -67,12 +67,14 @@ function Maze(props) {
                     <a href="https://github.com/Jorge-Perez-00/Maze-App" target="_blank" rel="noreferrer noopener" >
                         <img src={require(`../images/github-art.png`)} alt="github" className="image-card-image pixel-art-images" />
                     </a>
+                    <div className='mouse-pointer'></div>
                 </div>
 
                 <div className="image-card link-image-card">
                     <a href="https://jorge-perez-00.github.io/Maze-App/" target="_blank" rel="noreferrer noopener" >
                         <img src={require(`../images/demo-art.png`)} alt="demo" className="image-card-image pixel-art-images" />
                     </a>
+                    <div className='mouse-pointer'></div>
                 </div>
             </div>
 

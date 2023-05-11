@@ -46,10 +46,10 @@ function Links(props) {
                     </div>
                     <div className="homepage-links-container">
                         <a href="https://github.com/Jorge-Perez-00" target="_blank" rel="noreferrer noopener" >
-                            <img src={require("../images/github-art-dark.png")} alt="github" className="homepage-links" title="Github link" />
+                            <img src={require("../images/github-art-dark.png")} alt="github" className="homepage-links" title="Github" />
                         </a>
                         <a href="https://www.linkedin.com/in/jperez99/" target="_blank" rel="noreferrer noopener" >
-                            <img src={require("../images/linkedin-art.png")} alt="linkedin" className="homepage-links" title="Linkedin link" />
+                            <img src={require("../images/linkedin-art.png")} alt="linkedin" className="homepage-links" title="Linkedin" />
                         </a>
 
                         <img src={require("../images/resume-art.png")} alt="resume" className="homepage-links" title="Resume" onClick={handleResumeClick} />

@@ -8,6 +8,54 @@ img {
     
 }
 
+
+.single-page-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0%,125%);
+
+    width: 16vw;
+    height: 16vw;
+
+    max-width: 8dvh;
+    max-height: 8dvh;
+
+    background-color: red;
+
+    border: solid .10vmin white;
+    border-left: none;
+    border-bottom-right-radius: 3vmin;
+    border-top-right-radius: 2.5vmin;
+
+    background-image: url('../images/skip-button-art.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    animation: skipAnimation 1s ease;
+
+    z-index: 10;
+}
+
+.single-page-button:hover {
+    transform: scale(1.25) translate(10%, 100%);
+}
+
+@keyframes skipAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(-100%, 125%);
+    }
+
+    100% {
+        opacity: 1;
+        
+    }
+    
+}
+
 .arrow-buttons {
     position: absolute;
     width: 10vmin;
@@ -85,6 +133,9 @@ img {
     height: 100%;
 
     overflow: hidden;
+
+    touch-action: none;
+
 }
 
 .main-container.bg-normal {

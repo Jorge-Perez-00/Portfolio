@@ -26,14 +26,14 @@ function Info(props) {
 
     function handleClick() {
         //ON FIRST INFO CLICK SHOW NEW INFO (SHOW DRAG AND DROP INFO)
-        if(number == 0) {
+        if(number === 0) {
             setInfoType("dragdrop");
             setCharacterText(text["dragdrop"]);
             number = 1;
         }
 
         //ON SECOND INFO CLICK GO BACK TO HOMEPAGE AND RESET INFO (RESET INFO TO ONCLICK INFO)
-        else if(number == 1) {
+        else if(number === 1) {
             setShowInfo(false);
             setInfoType("click");
             setCharacterText(text["click"]);
@@ -47,6 +47,7 @@ function Info(props) {
                 <div 
                     className='info-button' 
                     onClick={handleMainButtonClick}
+                    title='Quick info about the features on the homepage'
                     style={hide === true ? {opacity: 0.4} : null}></div>
             }
 

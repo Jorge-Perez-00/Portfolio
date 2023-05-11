@@ -1,0 +1,354 @@
+
+
+/* HEADER STYLING SECTION */
+.singlepage-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: none;
+
+    width: 100%;
+
+    background-color: transparent;
+}
+
+
+/* HEADER BUTTON ON SMALL WIDTH SCREENS*/
+.header-main-button {
+    
+    width: max-content;
+    height: 95%;
+
+    margin-left: auto;
+    margin-right: 4vw;
+
+    box-sizing: border-box;
+
+    background-color: #12121283;
+
+    border-radius: 12.5vmin;
+    border: solid .25vmin aliceblue;
+    
+    cursor: pointer;
+    
+}
+
+
+.header-button-list-container {
+    position: fixed;
+    background-color: #121212ef;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: 150;
+
+    overflow-y: scroll;
+
+    animation: headerListButtons .5s ease;
+}
+
+
+@keyframes headerListButtons {
+    0% {
+        left: 100%
+    }
+}
+
+.header-list-close-button {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translate(-110%, 10%);
+
+    width: 20vw;
+    height: 20vw;
+    
+    max-width: 10vh;
+    max-height: 10vh;
+    
+    color: white;
+    font-size: 10rem;
+
+    background-color: transparent;
+    background-image: url('../images/letter-x.png');
+    background-size: 100%;
+   
+    border: none;
+    box-sizing: border-box;
+}
+
+.header-button-list {
+    display: flex;
+    flex-direction: column;
+
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+ 
+    width: 100%;
+
+}
+
+.header-list-button {
+    font-size: clamp(4.5rem, 2rem + 7.75vw, 8rem);
+    font-family: inherit;
+
+    color: aliceblue;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-decoration: underline;
+
+    margin: 1.4rem auto;
+
+    opacity: 0;
+    animation: headerButton .25s ease;
+    animation-fill-mode: forwards;
+
+}
+
+
+#aboutme {
+    animation-delay: .5s;
+}
+
+#skills {
+    animation-delay: .6s;
+}
+
+#projects {
+    animation-delay: .7s;
+}
+
+#links {
+    animation-delay: .8s;
+}
+
+#resume {
+    animation-delay: .9s
+}
+
+@keyframes headerButton {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* HEADER BUTTONS ON LARGE SCREENS */
+.singlepage-sections-container {
+    display: flex;
+    height: 95%;
+
+    margin-left: auto;
+    margin-right: 4vw;
+
+    display: none;
+}
+
+
+.header-button {
+    font-size: 4.5rem;
+    font-family: inherit;
+
+    width: max-content;
+    height: max-content;
+
+    margin: auto 1rem;
+
+    color: aliceblue;
+
+    background-color: #1212128d;
+    border: solid .2rem white;
+
+    box-sizing: border-box;
+
+    border-radius: 1rem;
+
+    cursor: pointer;
+
+    opacity: 0;
+    animation: headerButton .25s ease;
+    animation-fill-mode: forwards;
+}
+
+
+.header-button:hover {
+    background-color: aliceblue;
+    color: #121212;
+}
+
+
+
+
+
+
+/* SINGLE PAGE MAIN CONTAINER */
+
+.singlepage-main-container {
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #e7efff;
+    border: solid 1px black;
+}
+
+/* MAIN PAGE ART */
+.singlepage-art-container {
+    width: 100%;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: transparent;
+
+}
+
+.codeboy-layer {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /*
+    height: 33.333dvh;
+    width: calc(33.333dvh * 20);
+*/
+    width: 77.5vw;
+    height: 125vw;
+
+    max-width: 46.5vh;
+    max-height: 75vh;
+
+
+    background-color: transparent;
+    background-image: url('../images/skyblue-codeboy-power-on.png');
+    background-repeat: no-repeat;
+
+    background-size: contain;
+
+
+    filter: blur(2.5rem);
+
+    animation: blurEffect .75s linear .15s;
+    animation-fill-mode: forwards;
+}
+
+.screen-div {
+    position: absolute;
+    top: 23.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 35vw;
+    height: 35vw;
+
+    max-width: 22vh;
+    max-height: 22vh;
+
+    background-color: transparent;
+    background-repeat: repeat-x;
+    overflow: hidden;
+
+    border: solid .5rem black;
+    
+}
+
+.screen-div-art {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: calc(max(35vw, 2vh) * 20);
+    height: 100%;
+    
+/*
+    width: calc(35vw * 20);
+    height: 100%;
+*/
+    /*
+    max-width: calc(22vh * 20);
+    max-height: 100%;
+*/
+
+    background-image: url('../images/singlepage-main-art.png');
+    background-size: contain;
+
+    animation: screenArtAnimation 25s linear 1.85s infinite;
+}
+
+
+@keyframes screenArtAnimation {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(calc(max(-35vw, -22vh) * 10));
+    }
+}
+
+
+
+.single-containers {
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+
+}
+
+
+
+
+
+
+.project-cards {
+    outline: solid .1vmin white;
+    background-color: #4c4c4c;
+    color: white;
+}
+
+.project-text {
+    text-align: center;
+}
+
+
+
+@media screen and (min-width: 769px) {
+    .project-cards-container {
+        flex-direction: row;
+    }
+}
+
+
+
+@media screen and (min-width: 950px) {
+
+    .header-main-button {
+        display: none;
+    }
+
+    .header-button-list-container {
+        display: none;
+    }
+
+    .singlepage-sections-container {
+        display: flex;
+    }
+}

@@ -66,6 +66,7 @@ function Codeboy(props) {
                     <a href="https://github.com/Jorge-Perez-00/Portfolio" target="_blank" rel="noreferrer noopener" >
                         <img src={require(`../images/github-art.png`)} alt="github" className="image-card-image pixel-art-images" />
                     </a>
+                    <div className='mouse-pointer'></div>
                 </div>
             </div>
         

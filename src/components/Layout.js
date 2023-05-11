@@ -43,9 +43,10 @@ function Layout(props) {
         <div className="game-main-container">
             <header ref={headerRef}>
                 <img src={homepageButtonImage} alt="homepage button" className='homepage-button' onClick={handleHomepageButtonClick} onMouseEnter={handleHomepageButtonHover} onMouseLeave={handleHomepageButtonLeave} />
-                {game && <img src={require(`../images/skyblue-game-${game}.png`)} alt="game image" className='header-game-image' />}
+                {game && <img src={require(`../images/skyblue-game-${game}.png`)} alt="game" className='header-game-image' />}
             </header>
 
+            
 
             {game && 
                 <div className='main-art-container'>

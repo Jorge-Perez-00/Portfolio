@@ -442,6 +442,12 @@ class Homepage extends Component {
         event.stopPropagation();
     }
 
+    handleSinglePageButtonClick = () => {
+        if(!this.state.disableAllFeatures) {
+            this.props.navigate('/singlepage')
+        }
+    }
+
     render() {
 
         const largeGame = GAMES[this.state.gameClicked];
@@ -455,6 +461,7 @@ class Homepage extends Component {
                 
                 <Links disable={this.state.disableAllFeatures} hide={(this.state.playGame || (this.state.gameIsMoving !== null && this.state.isLongPress))} />
                 
+                <div className={`single-page-button ${(this.state.playGame || (this.state.gameIsMoving !== null && this.state.isLongPress)) && "disable-content"} `} onClick={this.handleSinglePageButtonClick} title="View everything in a single page"></div>
             
                 <div className={`color-buttons-container ${this.state.colorButtons}`}>
                     <div id="normal" className="color-button color-normal" onClick={this.setColor}></div>

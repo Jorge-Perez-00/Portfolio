@@ -14,7 +14,7 @@ function Skills(props) {
                     <div className="image-card-face">
                         <div className="image-card-front">
                             <img src={require(`../images/javascript-art.png`)} alt="javascript" className="image-card-image pixel-art-images" />                  
-
+                            <div className='mouse-pointer'></div>
                         </div>
                         <div className="image-card-back">
                             <h3 className="image-card-title" >Javascript</h3>
@@ -28,6 +28,7 @@ function Skills(props) {
                     <div className="image-card-face">
                         <div className="image-card-front">
                             <img src={require(`../images/html-art.png`)} alt="html" className="image-card-image pixel-art-images" />
+                            <div className='mouse-pointer'></div>
                         </div>
                         <div className="image-card-back">
                             <h3 className="image-card-title" >HTML</h3>
@@ -41,6 +42,7 @@ function Skills(props) {
                     <div className="image-card-face">
                         <div className="image-card-front">
                             <img src={require(`../images/css-art.png`)} alt="css" className="image-card-image pixel-art-images" />
+                            <div className='mouse-pointer'></div>
                         </div>
                         <div className="image-card-back">
                             <h3 className="image-card-title" >CSS</h3>
@@ -52,6 +54,7 @@ function Skills(props) {
                     <div className="image-card-face">
                         <div className="image-card-front">
                             <img src={require(`../images/reactjs-art.png`)} alt="reactjs" className="image-card-image pixel-art-images" />
+                            <div className='mouse-pointer'></div>
                         </div>
                         <div className="image-card-back">
                             <h3 className="image-card-title" >React JS</h3>
@@ -63,6 +66,7 @@ function Skills(props) {
                     <div className="image-card-face">
                         <div className="image-card-front">
                             <img src={require(`../images/c++-art.png`)} alt="c++" className="image-card-image pixel-art-images" />
+                            <div className='mouse-pointer'></div>
                         </div>
                         <div className="image-card-back">
                             <h3 className="image-card-title" >C++</h3>
@@ -74,6 +78,7 @@ function Skills(props) {
                     <div className="image-card-face">
                         <div className="image-card-front">
                             <img src={require(`../images/python-art.png`)} alt="python" className="image-card-image pixel-art-images" />
+                            <div className='mouse-pointer'></div>
                         </div>
                         <div className="image-card-back">
                             <h3 className="image-card-title" >Python</h3>
@@ -85,6 +90,7 @@ function Skills(props) {
                     <div className="image-card-face">
                         <div className="image-card-front">
                             <img src={require(`../images/firebase-art.png`)} alt="firebase" className="image-card-image pixel-art-images" />
+                            <div className='mouse-pointer'></div>
                         </div>
                         <div className="image-card-back">
                             <h3 className="image-card-title" >Firebase</h3>

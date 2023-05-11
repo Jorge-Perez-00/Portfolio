@@ -14,7 +14,7 @@ function Aboutme(props) {
                 <div className="card">
                     <img src={require(`../images/pixelated-me.png`)} alt="my pixelated character" className="card-image pixel-art-images" />
                     <div className="card-text-container">
-                        <h3>Me</h3>
+                        <h3 className="card-title">Me</h3>
                         <p className="card-text">My name is Jorge Perez and I am 23 years old </p>
                     </div>
                 </div>
@@ -22,7 +22,7 @@ function Aboutme(props) {
                 <div className="card">
                     <img src={require(`../images/pixelated-nyc.png`)} alt="NYC" className="card-image pixel-art-images" />
                     <div className="card-text-container">
-                        <h3>Background</h3>
+                        <h3 className="card-title">Background</h3>
                         <p className="card-text">I'm a Mexican-American programmer from New York City</p>
                     </div>
                 </div>
@@ -30,7 +30,7 @@ function Aboutme(props) {
                 <div className="card">
                     <img src={require(`../images/pixelated-hunter-logo.png`)} alt="Hunter College" className="card-image pixel-art-images" />
                     <div className="card-text-container">
-                        <h3>CUNY Hunter College</h3>
+                        <h3 className="card-title">CUNY Hunter College</h3>
                         <p className="card-text">I attended CUNY Hunter College between 2017-2022</p>
                     </div>
                 </div>
@@ -38,10 +38,12 @@ function Aboutme(props) {
                 <div className="card">
                     <img src={require(`../images/computer-scientist-art.png`)} alt="Computer Science" className="card-image pixel-art-images" />
                     <div className="card-text-container">
-                        <h3>Computer Scientist</h3>
+                        <h3 className="card-title">Computer Scientist</h3>
                         <p className="card-text">I graduated from Hunter College with a Bachelor's of Arts degree in Computer Science</p>
                     </div>
                 </div>
+
+                
             </div>
 
             <div>
@@ -61,12 +63,14 @@ function Aboutme(props) {
                     <a href="https://github.com/Jorge-Perez-00" target="_blank" rel="noreferrer noopener" >
                         <img src={require(`../images/github-art-dark.png`)} alt="github" className="image-card-image pixel-art-images" />
                     </a>
+                    <div className='mouse-pointer'></div>
                 </div>
 
                 <div className="image-card link-image-card">
                     <a href="https://www.linkedin.com/in/jperez99/" target="_blank" rel="noreferrer noopener" >
                         <img src={require(`../images/linkedin-art.png`)} alt="linkedin" className="image-card-image pixel-art-images" />
                     </a>
+                    <div className='mouse-pointer'></div>
                 </div>
             </div>
 
