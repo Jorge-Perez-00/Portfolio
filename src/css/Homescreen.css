@@ -200,6 +200,13 @@
     z-index: 106;
 }
 
+@keyframes unBlurEffect {
+    100% {
+        filter: blur(0);
+    }
+
+}
+
 @keyframes walk {
     100% {
         background-position: calc(25dvh * -6) 0;
@@ -257,13 +264,6 @@
     width: 100%;
 }
 
-@keyframes unBlurEffect {
-    100% {
-        filter: blur(0);
-    }
-    
-}
-
 
 .layers {
     position: absolute;
@@ -275,16 +275,8 @@
 
     background-repeat: repeat-x;
     background-size: contain;
-
-    /*
-    filter: blur(4rem);
-    */
 }
 
-/*
-    UnBlurEffect:
-    DELAY: 2.75s (the length of character-only animation)
-*/
 
 /*
     scrollAnimation:
@@ -296,9 +288,6 @@
     background-image: url('../images/lightpost layer.png');
    
     z-index: 108;
-    /*animation: unBlurEffect 1s linear 2.75s, scrollAnimation 60s linear 4.5s infinite;
-    animation-fill-mode: forwards;
-    */
     animation: scrollAnimation 60s linear 4.5s infinite;
 }
 
@@ -306,10 +295,6 @@
     background-image: url('../images/sidewalk layer.png');
 
     z-index: 105;
-    /*
-    animation: unBlurEffect 1s linear 2.75s, scrollAnimation 60s linear 4.5s infinite;
-    animation-fill-mode: forwards;
-    */
     animation: scrollAnimation 60s linear 4.5s infinite;
 }
 
@@ -317,10 +302,6 @@
     background-image: url('../images/sky layer.png');
    
     z-index: 100;
-    /*
-    animation: unBlurEffect 1s linear 2.75s, scrollAnimation 180s linear 4.5s infinite;
-    animation-fill-mode: forwards;
-    */
     animation: scrollAnimation 180s linear 4.5s infinite;
 }
 
@@ -328,11 +309,6 @@
     background-image: url('../images/buildings layer.png');
     
     z-index: 101;
-
-    /*
-    animation: unBlurEffect 1s linear 2.75s, scrollAnimation 120s linear 4.5s infinite;
-    animation-fill-mode: forwards;
-    */
     animation: scrollAnimation 120s linear 4.5s infinite;
 }
 

@@ -1,7 +1,7 @@
 
 import '../css/Layout.css'
-import skyblueCodeboy_OFF from '../images/skyblue-codeboy.png'
-import skyblueCodeboy_ON from '../images/skyblue-codeboy-power-on.png'
+import homepageButton_OFF from '../images/homepage-button-off.png'
+import homepageButton_ON from '../images/homepage-button-on.png'
 import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ function Layout(props) {
     const headerRef = useRef(null);
     const mainRef = useRef(null);
 
-    const [homepageButtonImage, setHomepageButtonImage] = useState(skyblueCodeboy_OFF);
+    const [homepageButtonImage, setHomepageButtonImage] = useState(homepageButton_OFF);
 
     
     function handleHomepageButtonClick() {
@@ -20,11 +20,11 @@ function Layout(props) {
     }
 
     function handleHomepageButtonHover() {
-        setHomepageButtonImage(skyblueCodeboy_ON);
+        setHomepageButtonImage(homepageButton_ON);
     }
 
     function handleHomepageButtonLeave() {
-        setHomepageButtonImage(skyblueCodeboy_OFF);
+        setHomepageButtonImage(homepageButton_OFF);
 
     }
 
