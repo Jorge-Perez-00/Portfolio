@@ -6,7 +6,7 @@
     left: 0;
 
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
 
     z-index: 500;
 }
@@ -25,8 +25,8 @@
     width: 17.5vw;
     height: 17.5vw;
 
-    max-width: 10vh;
-    max-height: 10vh;
+    max-width: 10dvh;
+    max-height: 10dvh;
 
     cursor: pointer;
     z-index: 350;
@@ -59,7 +59,7 @@
     height: auto;
     width: 90vw;
 
-    max-height: 80vh;
+    max-height: 80dvh;
 
     margin: 0 auto;
     margin-top: auto;
@@ -87,7 +87,7 @@
 
 
 
-@media screen and (max-width: 100vh) {
+@media screen and (max-width: 100dvh) {
     .download-resume-button {
         font-size: 10vmin;
     }

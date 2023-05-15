@@ -21,7 +21,7 @@ function Homescreen(props) {
     useEffect(() => {
         setTimeout(() => {
             setShowContent(true);
-        }, 2750)
+        }, 3250)
     });
 
 

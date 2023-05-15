@@ -78,14 +78,11 @@ header {
 .homepage-button {
     height: 100%;
     width: max-content;
-    
-    /*
-    margin-left: 1.5rem;
-    */
 
     margin-left: 4vw;
-
     margin-right: auto;
+
+    image-rendering: pixelated;
 
     cursor: pointer;
     opacity: 100;
@@ -332,7 +329,7 @@ main {
 h1 {
     text-align: center;
 
-    font-size: clamp(5rem, 4.1864rem + 2.5vw, 8rem);
+    font-size: clamp(4.75rem, 4rem + 2.5vw, 8rem);
     inline-size: 90%;
     margin-top: 5rem;
     margin-bottom: 2rem;
@@ -343,7 +340,7 @@ h1 {
 
 
 h2 {
-    font-size: clamp(5rem, 4.6211rem + 1.6842vw, 6.2rem);
+    font-size: clamp(4.75rem, 4rem + 1.5vw, 6.2rem);
 
     padding: 0;
     margin-bottom: 1rem;
@@ -390,9 +387,8 @@ p {
     font-size: clamp(2.5rem, 2.1842rem + 1.4035vw, 3.5rem);
     */
     
-    font-size: clamp(2.25rem, 1.8553rem + 1.7544vw, 3.5rem);    
-    
-    inline-size: 90%;
+    font-size: clamp(2rem, 1.8rem + 1.15vw, 3.5rem);    
+    inline-size: 100%;
     margin-inline-start: 0px;
     margin: 3rem auto;
 }
@@ -450,11 +446,12 @@ p {
 
 
     width: 90%;
-    max-width: 30rem;
+    max-width: 35rem;
 }
 
 .card-image {
-    width: 100%;
+    /*width: 100%;
+    */
     margin: auto;
     padding: 0;
     flex: 1;
@@ -467,9 +464,7 @@ p {
 }
 
 .card-title {
-    /*
-    font-size: 3.5rem;
-    */
+    
     font-size: clamp(2.5rem, 1.25rem + 4.75vw, 4rem);    
     margin: 1.5rem auto;
     padding: 0 1rem;
@@ -478,12 +473,12 @@ p {
 .card-text {
     background-color: none;
     text-align: left;
-    /*
-    font-size: 2.5rem;
-    */
+ 
     font-size: clamp(2rem, 1rem + 3.5vw, 2.75rem);    
     margin: 1rem auto;
     padding-bottom: 1.75rem;
+
+    inline-size: 90%;
 
 }
 
@@ -576,6 +571,7 @@ p {
 .image-card-text {
     font-size: clamp(2rem, 0.5rem + 4vw, 2.75rem);
     margin: 1.5rem auto;
+    inline-size: 90%;
 }
 
 
@@ -653,12 +649,16 @@ p {
 @media screen and (min-width: 481px) {
     .card {
         width: 75%;
-        max-width: 400px;
+        max-width: 350px;
     }
 }
 
 @media screen and (min-width: 769px) {
     
+    p {
+        inline-size: 90%;
+    }
+
     .cards-container {
         flex-direction: column;
         margin: auto;

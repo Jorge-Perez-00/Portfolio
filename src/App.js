@@ -16,10 +16,30 @@ class App extends Component{
   constructor(props) {
     super(props);
     this.state = {
-    
+      //color: "skyblue",
+      //display: 0,
     }
 
   }
+
+  /*
+  setColor = (COLOR) => {
+    this.setState({
+      color: COLOR
+    })
+  }
+
+  setDisplay = (DISPLAY) => {
+    this.setState({
+      display: DISPLAY
+    })
+  }
+  */
+
+
+
+
+
 
 
   render() {

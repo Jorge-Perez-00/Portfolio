@@ -10,10 +10,6 @@ import leftButtonImage from '../images/left-button.png'
 import rightButtonImage from '../images/right-button.png'
 
 
-
-
-
-
 const GAMES = ['aboutme', 'skills', 'tictactoe', 'maze', 'codeboy']
 
 
@@ -70,7 +66,6 @@ class Homepage extends Component {
 
 
 
-
         this.gamePositionX = 0;
         this.gamePositionY = 0;
 
@@ -83,6 +78,9 @@ class Homepage extends Component {
     
     }
 
+    /* 
+        UPDATES WHICH GAME WILL BE DISPLAYED ON SMALLER WIDTH SCREENS (MOBILE DEVICES, TABLETS, SMALL WIDTH DESKTOPS AND LAPTOPS)
+    */
     updateGameDisplay = (event) => {
         let number = parseInt(event.target.id, 10)
 
@@ -103,6 +101,11 @@ class Homepage extends Component {
 
     }
 
+    /*
+        FUNCTION THAT HANDLES THE COLOR BUTTONS PICKER LIST
+        SHOW: will display the the color buttons picker
+        HIDE: will hide the colors button picker outside the viewport
+    */
     handleColorButtons = (event) => {
         let type = event.target.id;
 
@@ -122,18 +125,23 @@ class Homepage extends Component {
        
     }
 
+    /*
+        SET THE MAIN COLOR OF BOTH THE GAMES AND CODEBOY + THE GRADIENT COLOR OF THE BACKGROUND OF HOMEPAGE
+    */
     setColor = (event) => {
         let COLOR = event.target.id;
-
+        
         this.setState({
             color: COLOR,
         })
     }
 
+    /*
+        FUNCTION THAT WILL START THE 3D ROTATION ON A GAME WHEN THE USER'S MOUSE HOVERS THE GAME.
+        THIS ONLY WORKS ON DEVICES THAT HAVE AN EXTERNAL MOUSE 
+    */
     handleMouseEnter = (event) => {
         let gameID = parseInt(event.target.id, 10);
-
-        //console.log("GAME HOVER ACTIVE !!!!")
 
         if(!isNaN(gameID) && !this.state.disableAllFeatures) {
             this.setState({
@@ -142,16 +150,20 @@ class Homepage extends Component {
         }
     }
 
+    /*
+        WHEN THE USER STOPS HOVERING THE GAME THE 3D ROTATION WILL STOP
+    */
     handleMouseLeave = () => {
         this.setState({
             gameHover: null,
         })
     }
 
+    /*
+        WHEN A GAME IS CLICKED A LARGER GAME WILL BE DISPLAYED
+    */
     handleGameClick = (event) => {
         let gameID = parseInt(event.target.id, 10);
-
-        //console.log("GAME CLICK ACTIVE! ID: " + gameID);
 
         if(!isNaN(gameID) && !this.state.isLongPress && !this.state.disableAllFeatures) {
             this.setState({
@@ -166,9 +178,10 @@ class Homepage extends Component {
    
     }
 
-
+    /*
+        CLOSE BUTTON FUNCTION THAT HIDES/REMOVES THE LARGE GAME DISPLAY 
+    */
     handleCloseButton = () => {
-        //console.log("CLOSE !")
         this.setState({
             hideLargeGame: true,
             largeGameClosing: true,
@@ -192,9 +205,11 @@ class Homepage extends Component {
     
     }
 
+    /*
+        FUNCTION THAT HANDLES THE PLAY BUTTON INSIDE THE LARGE GAME CONTAINER.
+        WHEN CLICKED MULTIPLE ANIMATIONS WILL PLAY AND THEN THE APPLICATION WILL NAVIGATE TO THE GAME PAGE
+    */
     handlePlayButton = () => {
-        //console.log("PLAY BUTTON !");
-
         this.setState({
             playGame: true,
             colorButtons: "hide",
@@ -219,7 +234,6 @@ class Homepage extends Component {
         },7500)
 
         this.timeout4 = setTimeout(() => {
-            //console.log("Navigate to Page")
             this.props.navigate(`/${GAMES[this.state.insertGameID]}`)
         },9600)
     }
@@ -227,11 +241,14 @@ class Homepage extends Component {
    
 
 
-    /* FUNCTIONS THAT HANDLE DRAG AND DROP FUNCTIONALITY  */ 
+    /*  FUNCTIONS THAT HANDLE DRAG AND DROP FUNCTIONALITY
+        MOUSE MOVE + MOUSE DOWN + MOUSE UP
+
+        THESE FUNCTIONS WORK WITH TOUCH SCREEN DEVICES (PHONES, TABLETS, ETC)
+    */ 
 
 
     handleMouseMove = (event) => {
-        //console.log("MOUSE MOVE")
 
         if(this.state.touchScreen) {
             this.newGamePositionX = event.touches[0].pageX - this.gamePositionX;
@@ -294,8 +311,6 @@ class Homepage extends Component {
     }
 
     handleMouseDown = (event) => {        
-        //console.log("MOUSE DOWN");
-
         if(!this.state.disableAllFeatures) {
             const gameID = parseInt(event.target.id, 10);
             
@@ -310,7 +325,6 @@ class Homepage extends Component {
 
             if(this.state.touchScreen) {
                 //console.log("MOBILE")
-                //console.log(event.touches);
 
                 let middlePointOfGame = event.currentTarget.clientWidth / 2;
                 
@@ -357,8 +371,6 @@ class Homepage extends Component {
 
 
     handleMouseUp = () => {
-        //console.log("MOUSE UP");
-
         if(this.inDropZone) {
             this.setState({
                 hideGameAfterDropInZone: true,
@@ -374,29 +386,6 @@ class Homepage extends Component {
             this.timeout2 = setTimeout(() => {
                 this.props.navigate(`/${GAMES[this.state.insertGameID]}`)
             }, 2600)
-
-            /* SWITCH CODEBOY FROM OFF TO ON */
-            /*
-            this.timeout = setTimeout(() => {
-                this.setState({
-                    devicePower: "-power-on",
-                })
-            }, 3750)
-            */
-
-            /* GAME PAGE TRANSITION */
-            /*
-            this.timeout2 = setTimeout(() => {
-                this.gameTransition();
-            },4500)
-            */
-
-            /* NAVIGATE TO GAME PAGE */
-            /*
-            this.timeout3 = setTimeout(() => {
-                this.props.navigate(`/${GAMES[this.state.insertGameID]}`)
-            }, 6600)
-            */
         }
         else {
             this.setState({
@@ -420,7 +409,13 @@ class Homepage extends Component {
         }
     }
 
- 
+    /*
+        PAGE TRASITION FUNCTION:
+        MAKES AN EQUAL COPY OF A HIDDEN DIV HIDING BEHIND THE SCREEN OF THE CODEBOY.
+        COPIES BOTH THE LEFT AND TOP POSITIONS + WIDTH AND HEIGHT OF THE HIDDEN DIV
+        THE NEW PERFECT COPY DIV WILL GROW UNTIL IT IS THE SIZE OF THE VIEWPORT (ANIMATION)
+        THEN THE APPLICATION WILL NAVIGATE TO THE GAME PAGE
+    */
     gameTransition = () => {
 
         const gameScreenPositionX = this.gameScreenRef.current.getBoundingClientRect().left;
@@ -442,6 +437,9 @@ class Homepage extends Component {
         event.stopPropagation();
     }
 
+    /*
+        NAVIGATES TO THE SINGLE PAGE COMPONENT WHERE ALL MY INFORMATION IS COMBINED IN ONE SINGLE PAGE
+    */
     handleSinglePageButtonClick = () => {
         if(!this.state.disableAllFeatures) {
             this.props.navigate('/singlepage')

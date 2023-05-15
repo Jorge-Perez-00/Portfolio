@@ -24,11 +24,8 @@
 
     box-sizing: border-box;
 
-    background-color: #12121283;
+    image-rendering: pixelated;
 
-    border-radius: 12.5vmin;
-    border: solid .25vmin aliceblue;
-    
     cursor: pointer;
     
 }
@@ -65,8 +62,8 @@
     width: 20vw;
     height: 20vw;
     
-    max-width: 10vh;
-    max-height: 10vh;
+    max-width: 10dvh;
+    max-height: 10dvh;
     
     color: white;
     font-size: 10rem;
@@ -96,6 +93,7 @@
 
 .header-list-button {
     font-size: clamp(4.5rem, 2rem + 7.75vw, 8rem);
+    font-size: 6dvh;
     font-family: inherit;
 
     color: aliceblue;
@@ -104,7 +102,7 @@
     border: none;
     text-decoration: underline;
 
-    margin: 1.4rem auto;
+    margin: 1dvh auto;
 
     opacity: 0;
     animation: headerButton .25s ease;
@@ -233,8 +231,8 @@
     width: 77.5vw;
     height: 125vw;
 
-    max-width: 46.5vh;
-    max-height: 75vh;
+    max-width: 46.5dvh;
+    max-height: 75dvh;
 
 
     background-color: transparent;
@@ -259,8 +257,8 @@
     width: 35vw;
     height: 35vw;
 
-    max-width: 22vh;
-    max-height: 22vh;
+    max-width: 22dvh;
+    max-height: 22dvh;
 
     background-color: transparent;
     background-repeat: repeat-x;
@@ -300,7 +298,7 @@
     }
 
     100% {
-        transform: translateX(calc(max(-35vw, -22vh) * 10));
+        transform: translateX(calc(max(-35vw, -22dvh) * 10));
     }
 }
 
@@ -308,7 +306,7 @@
 
 .single-containers {
     width: 90%;
-    max-width: 1500px;
+    max-width: 150rem;
     margin: auto;
 
 }
@@ -324,6 +322,7 @@
     color: white;
 }
 
+
 .project-text {
     text-align: center;
 }
@@ -331,10 +330,21 @@
 
 
 @media screen and (min-width: 769px) {
+
+    .project-images {
+        width: 42.5%;
+        height: auto;
+    }
+
     .project-cards-container {
         flex-direction: row;
     }
+
+    .project-text {
+        font-size: clamp(2.2rem, 1.1rem + 1.2vw, 2.75rem);
+    }
 }
+
 
 
 
