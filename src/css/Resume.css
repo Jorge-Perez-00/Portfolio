@@ -64,7 +64,9 @@
     margin: 0 auto;
     margin-top: auto;
 
-    filter: brightness(.95);
+    -webkit-filter: brightness(.95);
+
+            filter: brightness(.95);
 
 }
 
@@ -74,10 +76,11 @@
     color: #e7efff;
     text-decoration: none;
 
+    margin-top: 2vmin;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
-    outline: .25rem solid black;
+    outline: .25rem solid aliceblue;
 }
 
 .download-resume-button:hover {

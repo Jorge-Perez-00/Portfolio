@@ -6,7 +6,6 @@
     left: 0;
     top: 0;
 
-
     width: 16vw;
     height: 16vw;
 
@@ -24,31 +23,15 @@
     background-size: 100%;
     background-repeat: no-repeat;
 
-    cursor: pointer;
 
-    animation: infoButtonAnimation 1s ease;
+
+    cursor: pointer;
+    touch-action: none;
+
 
     z-index: 10;
 }
 
-
-@keyframes infoButtonAnimation {
-    0% {
-        transform: translate(-100%,-100%);
-    }
-
-    100% {
-        transform: translate(0%,0%);
-    }
-    
-}
-
-.info-button:hover {
-    transform: scale(1.25) translate(10%, 10%);
-    background-color: rgb(215, 216, 217);
-    border: #121212;
-
-}
 
 
 .info-container {
@@ -58,9 +41,11 @@
 
     background-color: #121212de;
 
-    
 
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     z-index: 300;
 }
 
@@ -69,12 +54,14 @@
     position: absolute;
     top: 2.5%;
     left: 50%;
-    transform: translate(-50%,-0%);
 
     width: 35dvh;
     height: 70dvh;
 
-    animation: infoAnimationRight .5s ease-out;
+    -webkit-animation: infoAnimationRight .5s ease-out;
+            animation: infoAnimationRight .5s ease-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 }
 
 .click {
@@ -87,15 +74,27 @@
     background-size: 100%;
 }
 
-@keyframes infoAnimationRight {
+@-webkit-keyframes infoAnimationRight {
     0% {
         opacity: 0;
-        left: 80%;
+        transform: translate(-10%, 0%);
     }
 
     100% {
         opacity: 1;
-        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+}
+
+@keyframes infoAnimationRight {
+    0% {
+        opacity: 0;
+        transform: translate(-10%, 0%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0%);
     }
 }
 
@@ -103,7 +102,6 @@
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translate(-50%, -105%);
 
     width: 97.5vw;
     height: 25dvh;
@@ -119,18 +117,34 @@
 
     background-color: #323232;
 
-    animation: characterText .5s ease;
+    -webkit-animation: characterContainerAnimation .5s ease;
+            animation: characterContainerAnimation .5s ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 }
 
-@keyframes characterText {
+@-webkit-keyframes characterContainerAnimation {
     0% {
         opacity: 0;
-        top: 200%;
+        transform: translate(-50%, 0%);
     }
 
     100% {
         opacity: 1;
-        top: 100%;
+        transform: translate(-50%, -105%);
+    }
+    
+}
+
+@keyframes characterContainerAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -105%);
     }
     
 }
@@ -187,15 +201,10 @@
 
 
 
-
-
-
 @media screen and (min-width: 125dvh) {
 
     .info-animation {
-
         top: 37.5%;
-        transform: translate(-50%, -50%);
 
         width: 80vw;
         height: 40vw;
@@ -203,8 +212,11 @@
         max-width: 110dvh;
         max-height: 55dvh;
 
-        
-        animation: infoAnimationTop .5s ease; 
+        opacity: 0;
+        -webkit-animation: infoAnimationTop .5s ease;
+                animation: infoAnimationTop .5s ease; 
+        -webkit-animation-fill-mode: forwards; 
+                animation-fill-mode: forwards;
     }
 
     .click {
@@ -217,21 +229,35 @@
         background-size: 100%;
     }
 
-    @keyframes infoAnimationTop {
+    @-webkit-keyframes infoAnimationTop {
         0% {
-            opacity: 0;
-            top: -100%;
+            transform: translate(-50%, -100%);
         }
         100% {
             opacity: 1;
-            top: 37.5%;
+            transform: translate(-50%, -50%);
+        }
+        
+    }
+
+    @keyframes infoAnimationTop {
+        0% {
+            transform: translate(-50%, -100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-50%, -50%);
         }
         
     }
 
     .info-character-container {
         display: flex;
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         max-width: none;
         max-height: none;
@@ -268,3 +294,12 @@
 
 }
 
+@media (pointer: fine) {
+
+    .info-button:hover {
+        transform: scale(1.25) translate(10%, 10%);
+        background-color: rgb(215, 216, 217);
+        border: #121212;
+    }
+
+}

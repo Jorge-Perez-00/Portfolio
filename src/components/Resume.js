@@ -23,7 +23,7 @@ function Resume(props) {
 
                     <div className="resume-content">
                         <img src={resumeImage} alt="resume" className="resume" />
-                        <a href={require("../resume/my-resume.pdf")} download="jorge-perez-resume" target="_blank" className="download-resume-button">DOWNLOAD</a>
+                        <a href={require("../resume/my-resume.pdf")} download="jorge-perez-resume" target="_blank" rel="noreferrer noopener" className="download-resume-button">DOWNLOAD</a>
                     </div>
                 </div>
             }

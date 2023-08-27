@@ -77,7 +77,7 @@ function Aboutme(props) {
             <h2 className="subtitle">Resume</h2>
 
             <img src={require(`../resume/resume-image.png`)} alt="resume" className="resume-image" />
-            <a href={require("../resume/my-resume.pdf")} download="jorge-perez-resume" target="_blank" className="download-button">DOWNLOAD</a>
+            <a href={require("../resume/my-resume.pdf")} download="jorge-perez-resume" target="_blank" rel="noreferrer noopener" className="download-button">DOWNLOAD</a>
 
 
            

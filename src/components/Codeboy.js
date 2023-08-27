@@ -16,22 +16,19 @@ function Codeboy(props) {
 
             <div className="image-cards-container">
                 <div className="image-card">
-                    <img src={require(`../images/skyblue-game-aboutme.png`)} alt="javascript" className="image-card-image" />
+                    <img src={require(`../images/Games/skyblue-game-aboutme.png`)} alt="javascript" className="image-card-image pixel-art-images" />
                 </div>
                 <div className="image-card">
-                    <img src={require(`../images/skyblue-game-skills.png`)} alt="javascript" className="image-card-image" />
+                    <img src={require(`../images/Games/skyblue-game-skills.png`)} alt="javascript" className="image-card-image pixel-art-images" />
                 </div>
                 <div className="image-card">
-                    <img src={require(`../images/skyblue-game-links.png`)} alt="javascript" className="image-card-image" />
+                    <img src={require(`../images/Games/skyblue-game-tictactoe.png`)} alt="javascript" className="image-card-image pixel-art-images" />
                 </div>
                 <div className="image-card">
-                    <img src={require(`../images/skyblue-game-tictactoe.png`)} alt="javascript" className="image-card-image" />
+                    <img src={require(`../images/Games/skyblue-game-maze.png`)} alt="javascript" className="image-card-image pixel-art-images" />
                 </div>
                 <div className="image-card">
-                    <img src={require(`../images/skyblue-game-maze.png`)} alt="javascript" className="image-card-image" />
-                </div>
-                <div className="image-card">
-                    <img src={require(`../images/skyblue-game-codeboy.png`)} alt="javascript" className="image-card-image" />
+                    <img src={require(`../images/Games/skyblue-game-codeboy.png`)} alt="javascript" className="image-card-image pixel-art-images" />
                 </div>
             </div>
 

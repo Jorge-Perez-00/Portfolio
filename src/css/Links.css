@@ -20,26 +20,14 @@
     margin: 0;
     padding: 0;
 
-    border: solid .10vmin navy;
+    border: solid .10vmin aliceblue;
     border-right: none;
     border-top: none;
     border-bottom-left-radius: 4vmin;
 
+    cursor: pointer;
     z-index: 10;
-
-    animation: topRightCornerAnimation 1s ease;
 }
-
-@keyframes topRightCornerAnimation {
-    0% {
-        transform: translate(0%, -100%);
-    }
-    
-    100% {
-        transform: translate(-100%, 0%);
-    }
-}
-
 
 .homepage-links-container-large {
     display: none;
@@ -149,6 +137,10 @@
         left: 100%;
         transform: translate(-100%, 0%);
 
+        width: -webkit-max-content;
+
+        width: -moz-max-content;
+
         width: max-content;
         height: 16vw;
         max-height: 8dvh;
@@ -162,7 +154,6 @@
         border-top: none;
         border-bottom-left-radius: 4vmin;
 
-        animation: topRightCornerAnimation 1s ease;
         z-index: 45;
     }
 

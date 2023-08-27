@@ -18,9 +18,9 @@ function Tictactoe(props) {
                 level the agent will make the best moves 100% of the time that lead to winning games or games that lead to a draw making it impossible for the user to win against the agent.</p>
 
             <div className="screenshots-container">
-                <img src={require('../images/ttt-screenshot-1.png')} alt="screenshot" className="screenshot-image" />
-                <img src={require('../images/ttt-screenshot-2.png')} alt="screenshot" className="screenshot-image" />
-                <img src={require('../images/ttt-screenshot-3.png')} alt="screenshot" className="screenshot-image" />
+                <img src={require('../images/Screenshots/ttt-screenshot-1.png')} alt="screenshot" className="screenshot-image" />
+                <img src={require('../images/Screenshots/ttt-screenshot-2.png')} alt="screenshot" className="screenshot-image" />
+                <img src={require('../images/Screenshots/ttt-screenshot-3.png')} alt="screenshot" className="screenshot-image" />
             </div>
 
             

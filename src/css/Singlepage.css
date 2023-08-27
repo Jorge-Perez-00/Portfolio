@@ -16,18 +16,21 @@
 /* HEADER BUTTON ON SMALL WIDTH SCREENS*/
 .header-main-button {
     
-    width: max-content;
-    height: 95%;
+    width: auto;
+    height: 80%;
 
     margin-left: auto;
     margin-right: 4vw;
 
     box-sizing: border-box;
 
-    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+
+        image-rendering: -moz-crisp-edges;
+
+        image-rendering: pixelated;
 
     cursor: pointer;
-    
 }
 
 
@@ -43,13 +46,26 @@
 
     overflow-y: scroll;
 
-    animation: headerListButtons .5s ease;
+    -webkit-animation: headerListButtons .5s ease;
+
+            animation: headerListButtons .5s ease;
 }
 
+@-webkit-keyframes headerListButtons {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
 
 @keyframes headerListButtons {
     0% {
-        left: 100%
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
     }
 }
 
@@ -105,30 +121,46 @@
     margin: 1dvh auto;
 
     opacity: 0;
-    animation: headerButton .25s ease;
-    animation-fill-mode: forwards;
+    -webkit-animation: headerButton .25s ease;
+            animation: headerButton .25s ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 
 }
 
 
 #aboutme {
-    animation-delay: .5s;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
 }
 
 #skills {
-    animation-delay: .6s;
+    -webkit-animation-delay: .6s;
+            animation-delay: .6s;
 }
 
 #projects {
-    animation-delay: .7s;
+    -webkit-animation-delay: .7s;
+            animation-delay: .7s;
 }
 
 #links {
-    animation-delay: .8s;
+    -webkit-animation-delay: .8s;
+            animation-delay: .8s;
 }
 
 #resume {
-    animation-delay: .9s
+    -webkit-animation-delay: .9s;
+            animation-delay: .9s
+}
+
+@-webkit-keyframes headerButton {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes headerButton {
@@ -159,7 +191,13 @@
     font-size: 4.5rem;
     font-family: inherit;
 
+    width: -webkit-max-content;
+
+    width: -moz-max-content;
+
     width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
 
     margin: auto 1rem;
@@ -176,8 +214,10 @@
     cursor: pointer;
 
     opacity: 0;
-    animation: headerButton .25s ease;
-    animation-fill-mode: forwards;
+    -webkit-animation: headerButton .25s ease;
+            animation: headerButton .25s ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 }
 
 
@@ -187,12 +227,7 @@
 }
 
 
-
-
-
-
 /* SINGLE PAGE MAIN CONTAINER */
-
 .singlepage-main-container {
     position: absolute;
     width: 100%;
@@ -224,10 +259,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    /*
-    height: 33.333dvh;
-    width: calc(33.333dvh * 20);
-*/
     width: 77.5vw;
     height: 125vw;
 
@@ -236,73 +267,29 @@
 
 
     background-color: transparent;
-    background-image: url('../images/skyblue-codeboy-special.png');
+   
+    background-image: url('../images/GIFS/codeboy-special.gif');
     background-repeat: no-repeat;
-
     background-size: contain;
 
+    -ms-interpolation-mode: nearest-neighbor;
 
-    filter: blur(2.5rem);
+        image-rendering: -moz-crisp-edges;
 
-    animation: blurEffect .75s linear .15s;
-    animation-fill-mode: forwards;
+        image-rendering: pixelated;
+
+
+    -webkit-filter: blur(2.5rem);
+
+
+            filter: blur(2.5rem);
+
+    -webkit-animation: blurEffect .75s linear .15s;
+
+            animation: blurEffect .75s linear .15s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 }
-
-.screen-div {
-    position: absolute;
-    top: 23.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 35vw;
-    height: 35vw;
-
-    max-width: 22dvh;
-    max-height: 22dvh;
-
-    background-color: transparent;
-    background-repeat: repeat-x;
-    overflow: hidden;
-
-    border: solid .5rem black;
-    
-}
-
-.screen-div-art {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: calc(max(35vw, 2vh) * 20);
-    height: 100%;
-    
-/*
-    width: calc(35vw * 20);
-    height: 100%;
-*/
-    /*
-    max-width: calc(22vh * 20);
-    max-height: 100%;
-*/
-
-    background-image: url('../images/singlepage-main-art.png');
-    background-size: contain;
-
-    animation: screenArtAnimation 25s linear 1.85s infinite;
-}
-
-
-@keyframes screenArtAnimation {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(calc(max(-35vw, -22dvh) * 10));
-    }
-}
-
-
 
 .single-containers {
     width: 90%;
@@ -310,10 +297,6 @@
     margin: auto;
 
 }
-
-
-
-
 
 
 .project-cards {

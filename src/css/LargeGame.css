@@ -1,0 +1,468 @@
+
+
+
+/* LARGE GAME SECTION */
+
+.large-container {
+    position: absolute;
+    left: 0; 
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: 45;
+
+    -webkit-animation: containerMoveDown 1s ease-in-out;
+
+            animation: containerMoveDown 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+
+
+.large-game-background {
+    position: absolute;
+    background-color: #121212;
+    opacity: 80%;
+    width: 100%;
+    height: 100%;
+}
+
+@-webkit-keyframes containerMoveDown {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes containerMoveDown {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+
+
+.large-game {
+    position: absolute;
+
+    width: 62.5vw;
+    height: 62.5vw;
+
+    max-width: 40dvh;
+    max-height: 40dvh;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 46;
+
+
+}
+
+.large-game-scene {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    perspective: 60dvh;
+
+    -webkit-user-select: none;
+
+       -moz-user-select: none;
+
+        -ms-user-select: none;
+
+            user-select: none;
+}
+
+
+.large-game-title {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    position: absolute;
+    left: 50%;
+    top: -47.5%;
+   
+    height: 20%;
+
+    display: block;
+
+    background-color: none;
+
+    opacity: 0;
+    -webkit-animation: slideToTopLarge .75s ease-in-out 1s;
+            animation: slideToTopLarge .75s ease-in-out 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+    -ms-interpolation-mode: nearest-neighbor;
+
+        image-rendering: -moz-crisp-edges;
+
+        image-rendering: pixelated;
+}
+
+
+
+.large-project-title {
+    width: auto;
+    height: 12%;
+    top: -42.5%;
+}
+
+.large-game-arrow {
+    position: absolute;
+    left: 50%;
+    top: -22.5%;
+    
+    width: 15%;
+    height: 15%;
+
+    display: block;
+
+    opacity: 0;
+    -webkit-animation: slideToTopLarge .5s ease-in-out 1s;
+            animation: slideToTopLarge .5s ease-in-out 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+}
+
+@-webkit-keyframes slideToTopLarge {
+    0% {
+        transform: translate(-50%, 125%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, 0%);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideToTopLarge {
+    0% {
+        transform: translate(-50%, 125%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, 0%);
+        opacity: 1;
+    }
+
+}
+
+
+
+.large-game-box {
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-animation: rotationLarge 4s ease-out 1.8s infinite;
+            animation: rotationLarge 4s ease-out 1.8s infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotationLarge {
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotationLarge {
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.large-game-face {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+}
+
+.large-game-front {
+    transform: rotateY(0deg) translateZ(min(6.25vw, 4dvh));
+    z-index: 100;
+}
+
+.large-game-back {
+    transform: rotateY(180deg) translateZ(min(6.25vw, 4dvh));
+}
+
+.large-game-left {
+    width: 20%;
+    transform: rotateY(-90deg) translateZ(min(6.25vw, 4dvh));
+}
+
+.large-game-right {
+    width: 20%;
+    transform: rotateY(90deg) translateZ(min(56.25vw, 36dvh));
+}
+
+.large-game-images {
+    -ms-interpolation-mode: nearest-neighbor;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: pixelated;
+}
+
+.lg-game-side-image {
+    -o-object-fit: fill;
+       object-fit: fill;
+    background-color: black;
+}
+
+
+
+.hide-large-game-content {
+    display: none;
+}
+
+.stop-large-game-animation {
+    -webkit-animation: singleRotation 1s ease-out;
+            animation: singleRotation 1s ease-out;
+}
+
+.move-large-game-down {
+    -webkit-animation: largeGamePlayAnimation 1.5s ease-in-out 1s;
+            animation: largeGamePlayAnimation 1.5s ease-in-out 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes singleRotation {
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes singleRotation {
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes largeGamePlayAnimation {
+
+    50% {
+        top: 100%;
+        transform: translate(-50%, -100%);
+    }
+
+    100% {
+        top: 0%;
+        transform: translate(-50%, -175%);
+    }
+}
+
+@keyframes largeGamePlayAnimation {
+
+    50% {
+        top: 100%;
+        transform: translate(-50%, -100%);
+    }
+
+    100% {
+        top: 0%;
+        transform: translate(-50%, -175%);
+    }
+}
+
+
+.large-game-play-button {
+    position: absolute;
+    width: 50%;
+    height: 21.5%;
+
+    left: 50%;
+    top: 130%;
+
+    margin: none;
+    padding: none;
+    border: none;
+    box-sizing: border-box;
+
+    background-color: transparent;
+    background-image: url('../images/play-button-art.png');
+    background-size: 100%;
+
+    opacity: 0;
+    -webkit-animation: fromBottomToUp .5s ease-in-out 1.01s;
+            animation: fromBottomToUp .5s ease-in-out 1.01s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+    -ms-interpolation-mode: nearest-neighbor;
+
+        image-rendering: -moz-crisp-edges;
+
+        image-rendering: pixelated;
+    cursor: pointer;
+
+}
+
+.large-game-play-button img {
+    height: 100%;
+    width: 100%;
+}
+
+.large-game-play-button:hover {
+    background-color: #ffffff;
+    background-image: url('../images/play-button-art-hover.png');
+    background-size: 100%;
+}
+
+@-webkit-keyframes fromBottomToUp {
+    0% {
+        transform: translate(-50%, 50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+@keyframes fromBottomToUp {
+    0% {
+        transform: translate(-50%, 50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.large-game-close-button {
+    position: absolute;
+    width: 17.5vmin;
+    height: 17.5vmin;
+
+    max-width: 10dvh;
+    max-height: 10dvh;
+
+    cursor: pointer;
+
+    border-style: none;
+    top: 0;
+    left: 100%;
+
+    background-color: transparent;
+    background-image: url('../images/letter-x.png');
+    background-size: 100%;
+
+    opacity: 0;
+    -webkit-animation: closeButtonAnimation .5s ease-in-out 1.01s;
+            animation: closeButtonAnimation .5s ease-in-out 1.01s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+    -ms-interpolation-mode: nearest-neighbor;
+
+        image-rendering: -moz-crisp-edges;
+
+        image-rendering: pixelated;
+    z-index: 46;
+}
+
+.large-game-close-button:hover {
+    background-color: rgb(226, 95, 95);
+    background-image: url('../images/letter-x-hover.png');
+}
+
+@-webkit-keyframes closeButtonAnimation {
+    0% {
+        transform: translate(-107.5%, -100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-107.5%, 7.5%);
+    }
+}
+
+@keyframes closeButtonAnimation {
+    0% {
+        transform: translate(-107.5%, -100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-107.5%, 7.5%);
+    }
+}
+
+
+
+@media screen and (min-width: 125dvh) {
+
+
+    .large-project-title {
+        height: 15%;
+        top: -45%;
+    }
+
+    .large-game {
+        position: absolute;
+
+        width: 35vmin;
+        height: 35vmin;
+
+        max-width: none;
+        max-height: none;
+    }
+
+
+
+    .large-game-front {
+        transform: rotateY(0deg) translateZ(3.5vmin);
+    }
+
+    .large-game-back {
+        transform: rotateY(180deg) translateZ(3.5vmin);
+    }
+
+    .large-game-left {
+        width: 20%;
+        transform: rotateY(-90deg) translateZ(3.5vmin);
+    }
+
+    .large-game-right {
+        width: 20%;
+        transform: rotateY(90deg) translateZ(31.5vmin);
+    }
+
+
+}

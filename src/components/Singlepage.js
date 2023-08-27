@@ -2,8 +2,8 @@
 import '../css/Layout.css'
 import '../css/Singlepage.css'
 
-import homepageButton_OFF from '../images/homepage-button-off.png'
-import homepageButton_ON from '../images/homepage-button-on.png'
+import homepageButton_OFF from '../images/Codeboy/skyblue-codeboy.png'
+import homepageButton_ON from '../images/Codeboy/skyblue-codeboy-power-on.png'
 import headerMainButton from '../images/header-button.png'
 
 import { useRef, useState } from 'react';
@@ -119,11 +119,6 @@ function Singlepage(props) {
                 <div className={`main-art-layers layer-1 skills-art`}> </div>
 
                 <div className='codeboy-layer'>
-                    <div className='screen-div'>
-                        <div className='screen-div-art'>
-
-                        </div>
-                    </div>
 
                 </div>
 
@@ -285,7 +280,7 @@ function Singlepage(props) {
 
                 <div className="cards-container project-cards-container">
                     <div className="card project-cards">
-                        <img src={require(`../images/skyblue-game-tictactoe.png`)} alt="my pixelated character" className="card-image pixel-art-images project-images" />
+                        <img src={require(`../images/Games/skyblue-game-tictactoe.png`)} alt="my pixelated character" className="card-image pixel-art-images project-images" />
                         <div className="card-text-container">
                             <h3 className="card-title">Tic-Tac-Toe</h3>
                             <p className="card-text project-text">Simple tic-tac-toe game where you play against an agent that was trained with reinforcement learning. </p>
@@ -293,7 +288,7 @@ function Singlepage(props) {
                     </div>
 
                     <div className="card project-cards">
-                        <img src={require(`../images/skyblue-game-maze.png`)} alt="NYC" className="card-image pixel-art-images project-images" />
+                        <img src={require(`../images/Games/skyblue-game-maze.png`)} alt="NYC" className="card-image pixel-art-images project-images" />
                         <div className="card-text-container">
                             <h3 className="card-title">Maze</h3>
                             <p className="card-text project-text">Maze application where you can train an agent to solve any 30x30 maze with reinforcement learning, play 1 player and 2 player offline games, and play a 4 player online multiplayer game.</p>
@@ -301,7 +296,7 @@ function Singlepage(props) {
                     </div>
 
                     <div className="card project-cards">
-                        <img src={require(`../images/skyblue-game-codeboy.png`)} alt="Hunter College" className="card-image pixel-art-images project-images" />
+                        <img src={require(`../images/Games/skyblue-game-codeboy.png`)} alt="Hunter College" className="card-image pixel-art-images project-images" />
                         <div className="card-text-container">
                             <h3 className="card-title">Codeboy</h3>
                             <p className="card-text project-text">My coding portfolio built with a lot of love. The portfolio was built with reactjs and it contains many animations and custom art implemented and created from scratch by me.</p>
@@ -333,7 +328,7 @@ function Singlepage(props) {
 
                 <h1 ref={resumeRef} className='subtitle'>RESUME</h1>
                 <img src={require(`../resume/resume-image.png`)} alt="resume" className="resume-image" />
-                <a href={require("../resume/my-resume.pdf")} download="jorge-perez-resume" target="_blank" className="download-button">DOWNLOAD</a>
+                <a href={require("../resume/my-resume.pdf")} download="jorge-perez-resume" target="_blank" rel="noreferrer noopener" className="download-button">DOWNLOAD</a>
 
             </div>
 

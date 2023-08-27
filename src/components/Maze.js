@@ -22,11 +22,11 @@ function Maze(props) {
                 game mode where 2-4 different unique players can race against each other to find the exit of a randomly generated maze. </p>
 
             <div className="screenshots-container">
-                <img src={require('../images/maze-screenshot-1.png')} alt="screenshot" className="screenshot-image" />
-                <img src={require('../images/maze-screenshot-2.png')} alt="screenshot" className="screenshot-image" />
-                <img src={require('../images/maze-screenshot-3.png')} alt="screenshot" className="screenshot-image" />
-                <img src={require('../images/maze-screenshot-4.png')} alt="screenshot" className="screenshot-image" />
-                <img src={require('../images/maze-screenshot-5.png')} alt="screenshot" className="screenshot-image" />
+                <img src={require('../images/Screenshots/maze-screenshot-1.png')} alt="screenshot" className="screenshot-image" />
+                <img src={require('../images/Screenshots/maze-screenshot-2.png')} alt="screenshot" className="screenshot-image" />
+                <img src={require('../images/Screenshots/maze-screenshot-3.png')} alt="screenshot" className="screenshot-image" />
+                <img src={require('../images/Screenshots/maze-screenshot-4.png')} alt="screenshot" className="screenshot-image" />
+                <img src={require('../images/Screenshots/maze-screenshot-5.png')} alt="screenshot" className="screenshot-image" />
             </div>
 
 

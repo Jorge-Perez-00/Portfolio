@@ -1,0 +1,263 @@
+
+
+.arrow-buttons {
+    position: absolute;
+    width: 10vmin;
+    height: 10vmin;
+
+    max-width: 6dvh;
+    max-height: 6dvh;
+
+    outline: none;
+    padding: 0;
+    border-style: none;
+    cursor: pointer;
+    z-index: 40;
+
+    background-size: 100%;
+}
+
+.colors-show-button {
+    background-color: transparent;
+
+    top: 40%;
+    left: 1%;
+    transform: translate(0%, -50%);
+    background-image: url('../images/right-button.png');
+
+    -webkit-animation: bounceAnimationHorizontal .5s ease-in-out 0s infinite;
+
+            animation: bounceAnimationHorizontal .5s ease-in-out 0s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+}
+
+.colors-hide-button {
+    top: 50%;
+    left: 110%;
+
+    transform: translate(0%, -50%);
+    background-color: transparent;
+    background-image: url('../images/left-button.png');
+}
+
+
+@-webkit-keyframes bounceAnimationHorizontal {
+    100% {
+        transform: translate(25%, -50%);
+    }
+}
+
+
+@keyframes bounceAnimationHorizontal {
+    100% {
+        transform: translate(25%, -50%);
+    }
+}
+
+
+.color-buttons-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    height: 40%;
+
+    max-width: 5dvh;
+    max-height: 80vw;
+
+    left: 1%;
+    top: 40%;
+
+    outline: .001vmin solid aliceblue;
+
+    border-radius: 5vmin;
+    padding: 1vmin;
+
+    background-color: rgba(0, 0, 0, 0.521);
+
+    -webkit-animation: slideFromLeft .5s ease-in-out;
+
+            animation: slideFromLeft .5s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+
+    z-index: 40;
+}
+
+
+
+@-webkit-keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-100%, -50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0%, -50%);
+    }
+
+}
+
+
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-100%, -50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0%, -50%);
+    }
+
+}
+
+/* COLOR BUTTONS SECTION */
+
+.color-button {
+    width: 100%;
+    height: 11%;
+    margin: auto;
+    background-color: aqua;
+    border-radius: 100vmin;
+
+    outline: .25vmin solid black;
+    opacity: 80%;
+}
+
+.color-button:hover {
+    opacity: 100%;
+}
+
+.color-normal {
+    background-color: #a9a9a9;
+}
+
+.color-red {
+    background-color: #cf4040;
+}
+
+.color-orange {
+    background-color: #f2c292;
+}
+
+.color-yellow {
+    background-color: #fbf236;
+}
+
+.color-skyblue {
+    background-color: #6bd7ee;
+}
+
+.color-blue {
+    background-color: #5691fb;
+}
+
+.color-purple {
+    background-color: #b158f2;
+}
+
+.color-pink {
+    background-color: #e979e2;
+}
+
+
+@media screen and (min-width: 125dvh) {
+
+    .arrow-buttons {
+        width: 3.25vw;
+        height: 3.25vw;
+
+        max-width: 5dvh;
+        max-height: 5dvh;
+    }
+
+    .colors-show-button {
+        background-color: transparent;
+
+        top: 1%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        background-image: url('../images/show-button.png');
+
+        -webkit-animation: bounceAnimationVertical .5s ease-in-out 0s infinite;
+
+                animation: bounceAnimationVertical .5s ease-in-out 0s infinite;
+        -webkit-animation-direction: alternate;
+                animation-direction: alternate;
+    }
+
+    @-webkit-keyframes bounceAnimationVertical {
+        100% {
+            transform: translate(-50%, 25%);
+        }
+    }
+
+    @keyframes bounceAnimationVertical {
+        100% {
+            transform: translate(-50%, 25%);
+        }
+    }
+
+    .colors-hide-button {
+        background-color: transparent;
+
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        background-image: url('../images/hide-button.png');
+    }
+
+    .color-buttons-container {
+        flex-direction: row;
+
+        top: 1%;
+        left: 50%;
+
+        width: 30%;
+        height: 5%;
+
+        max-width: 50dvh;
+        max-height: 3vw;
+    
+        -webkit-animation: slideFromTop .5s ease-in-out;
+    
+                animation: slideFromTop .5s ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+    }
+
+    .color-button {
+        width: 11%;
+        height: 100%;
+    }
+
+    @-webkit-keyframes slideFromTop {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, -100%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(-50%, 0%);
+        }
+    }
+
+    @keyframes slideFromTop {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, -100%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(-50%, 0%);
+        }
+    }
+
+}

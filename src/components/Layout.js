@@ -1,7 +1,7 @@
 
 import '../css/Layout.css'
-import homepageButton_OFF from '../images/homepage-button-off.png'
-import homepageButton_ON from '../images/homepage-button-on.png'
+import homepageButton_OFF from '../images/Codeboy/skyblue-codeboy.png'
+import homepageButton_ON from '../images/Codeboy/skyblue-codeboy-power-on.png'
 import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -25,9 +25,7 @@ function Layout(props) {
 
     function handleHomepageButtonLeave() {
         setHomepageButtonImage(homepageButton_OFF);
-
     }
-
 
     function scrollToTop() {
         headerRef.current.scrollIntoView({behavior: 'smooth'});
@@ -43,10 +41,9 @@ function Layout(props) {
         <div className="game-main-container">
             <header ref={headerRef}>
                 <img src={homepageButtonImage} alt="homepage button" className='homepage-button' onClick={handleHomepageButtonClick} onMouseEnter={handleHomepageButtonHover} onMouseLeave={handleHomepageButtonLeave} />
-                {game && <img src={require(`../images/skyblue-game-${game}.png`)} alt="game" className='header-game-image' />}
+                {game && <img src={require(`../images/Games/skyblue-game-${game}.png`)} alt="game" className='header-game-image' />}
             </header>
 
-            
 
             {game && 
                 <div className='main-art-container'>
