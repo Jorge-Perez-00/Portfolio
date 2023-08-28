@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c4e99669.css",
-    "main.js": "/static/js/main.b4791b07.js",
+    "main.css": "/static/css/main.647685d3.css",
+    "main.js": "/static/js/main.4a62313b.js",
     "static/js/787.3aeecc06.chunk.js": "/static/js/787.3aeecc06.chunk.js",
     "static/media/resume-image.png": "/static/media/resume-image.23c175f9a67eccf57fab.png",
     "static/media/ttt-screenshot-3.png": "/static/media/ttt-screenshot-3.a3e04b029e7f065018d3.png",
@@ -16,14 +16,20 @@
     "static/media/maze-screenshot-5.png": "/static/media/maze-screenshot-5.547b12a60f36aeeab757.png",
     "static/media/onclick-animation-vertical.gif": "/static/media/onclick-animation-vertical.3c639bc25b1b43779c17.gif",
     "static/media/ttt-screenshot-2.png": "/static/media/ttt-screenshot-2.36cc9ce6419f7fe4ac35.png",
+    "static/media/pixelgames-screenshot-1.png": "/static/media/pixelgames-screenshot-1.9f0ef6534f5268292563.png",
     "static/media/ttt-screenshot-1.png": "/static/media/ttt-screenshot-1.9162af05ff91af3b9f87.png",
+    "static/media/pixelgames-screenshot-5.png": "/static/media/pixelgames-screenshot-5.bcceff792b49c631652d.png",
+    "static/media/pixelgames-screenshot-4.png": "/static/media/pixelgames-screenshot-4.c6c1ab7f03f6b572665a.png",
+    "static/media/pixelgames-screenshot-2.png": "/static/media/pixelgames-screenshot-2.ecf95066e95c98f734c8.png",
+    "static/media/pixelgames-screenshot-3.png": "/static/media/pixelgames-screenshot-3.b80b8ae3ace273c7be20.png",
+    "static/media/pixelgames-main-art-2.png": "/static/media/pixelgames-main-art-2.e25d7cec4aee988e1e30.png",
     "index.html": "/index.html",
-    "main.c4e99669.css.map": "/static/css/main.c4e99669.css.map",
-    "main.b4791b07.js.map": "/static/js/main.b4791b07.js.map",
+    "main.647685d3.css.map": "/static/css/main.647685d3.css.map",
+    "main.4a62313b.js.map": "/static/js/main.4a62313b.js.map",
     "787.3aeecc06.chunk.js.map": "/static/js/787.3aeecc06.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4e99669.css",
-    "static/js/main.b4791b07.js"
+    "static/css/main.647685d3.css",
+    "static/js/main.4a62313b.js"
   ]
 }
