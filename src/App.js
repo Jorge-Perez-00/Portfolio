@@ -10,6 +10,8 @@ import Skills from './components/Skills';
 import Tictactoe from './components/Tictactoe';
 import Maze from './components/Maze';
 import Codeboy from './components/Codeboy';
+import PixelGames from './components/PixelGames';
+
 import Singlepage from './components/Singlepage';
 
 class App extends Component{ 
@@ -22,26 +24,6 @@ class App extends Component{
 
   }
 
-  /*
-  setColor = (COLOR) => {
-    this.setState({
-      color: COLOR
-    })
-  }
-
-  setDisplay = (DISPLAY) => {
-    this.setState({
-      display: DISPLAY
-    })
-  }
-  */
-
-
-
-
-
-
-
   render() {
     return (
       <div className='App' >
@@ -53,6 +35,7 @@ class App extends Component{
           <Route path="/tictactoe" element={<Tictactoe/>}/>
           <Route path="/maze" element={<Maze/>}/>
           <Route path="/codeboy" element={<Codeboy/>}/>
+          <Route path="/pixelgames" element={<PixelGames />} />
           <Route path="/singlepage" element={<Singlepage />} />
         </Routes>
       </div>

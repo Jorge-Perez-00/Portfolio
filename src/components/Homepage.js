@@ -11,14 +11,15 @@ import LargeGame from "./LargeGame";
 import InsertGame from "./InsertGame";
 
 
-const GAMES = ['aboutme', 'skills', 'tictactoe', 'maze', 'codeboy']
+const GAMES = ['aboutme', 'skills', /*'tictactoe',*/ 'maze', 'codeboy', 'pixelgames']
 
+let COLOR = "skyblue";
 
 class Homepage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            color: "skyblue",
+            color: COLOR,
             
             gameClicked: null,
             hideLargeGame: false,
@@ -58,6 +59,8 @@ class Homepage extends Component {
         clearTimeout(this.timeout2);
         clearTimeout(this.timeout3);
         clearTimeout(this.timeout4);
+
+        COLOR = this.state.color;
     }
 
 

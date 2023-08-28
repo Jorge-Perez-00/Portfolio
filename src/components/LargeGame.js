@@ -2,8 +2,9 @@
 import '../css/LargeGame.css'
 
 
-const GAMES = ['aboutme', 'skills', 'tictactoe', 'maze', 'codeboy']
+const GAMES = ['aboutme', 'skills', /*'tictactoe',*/ 'maze', 'codeboy', 'pixelgames']
 
+const PROJECTS = new Set(['maze', 'codeboy', 'pixelgames'])
 
 function LargeGame(props) {
 
@@ -21,7 +22,7 @@ function LargeGame(props) {
                 <div className={`large-game ${playGame && 'move-large-game-down'} `} >
                     <div className={`large-game-scene`}  >
 
-                        <img className={`large-game-title ${playGame && 'hide-large-game-content'} ${(GAMES[gameClicked] === 'maze' || GAMES[gameClicked] === 'tictactoe' || GAMES[gameClicked] === 'codeboy') && 'large-project-title'}`} src={require(`../images/title-${GAMES[gameClicked]}.png`)} alt="game title" />
+                        <img className={`large-game-title ${playGame && 'hide-large-game-content'} ${PROJECTS.has(GAMES[gameClicked]) && 'large-project-title'}`} src={require(`../images/title-${GAMES[gameClicked]}.png`)} alt="game title" />
                         <img className={`large-game-arrow ${playGame && 'hide-large-game-content'} `} src={require(`../images/hide-button.png`)} alt="triangle" />
 
                         <div className={`large-game-box ${playGame && 'stop-large-game-animation'} `}>

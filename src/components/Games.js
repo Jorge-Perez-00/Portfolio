@@ -7,7 +7,10 @@ import leftButtonImage from '../images/left-button.png'
 import rightButtonImage from '../images/right-button.png'
 
 
-const GAMES = ['aboutme', 'skills', 'tictactoe', 'maze', 'codeboy']
+const GAMES = ['aboutme', 'skills', /*'tictactoe',*/ 'maze', 'codeboy', 'pixelgames']
+
+const PROJECTS = new Set(['maze', 'codeboy', 'pixelgames'])
+
 
 function Games(props) {
     //console.log("GAMES RENDER !");
@@ -254,7 +257,7 @@ function Games(props) {
 
 
                         <img
-                            className={`game-title ${gameHover === gameID && 'game-title-active'} ${gameMove !== null && "hide-game-content"} ${(game === 'maze' || game === 'tictactoe' || game === 'codeboy') && 'project-title'}`}
+                            className={`game-title ${gameHover === gameID && 'game-title-active'} ${gameMove !== null && "hide-game-content"} ${PROJECTS.has(game) && 'project-title'}`}
                             src={require(`../images/title-${game}.png`)} alt="game title"
                             draggable='false'
                             onMouseDown={handleChildElementMouseDown}

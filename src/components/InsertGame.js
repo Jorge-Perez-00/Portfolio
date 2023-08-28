@@ -1,7 +1,7 @@
 
 import '../css/InsertGame.css'
 
-const GAMES = ['aboutme', 'skills', 'tictactoe', 'maze', 'codeboy']
+const GAMES = ['aboutme', 'skills', /*'tictactoe',*/ 'maze', 'codeboy', 'pixelgames']
 
 function InsertGame(props) {
 

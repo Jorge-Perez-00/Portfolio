@@ -53,15 +53,15 @@ function Layout(props) {
                     <div className={`main-art-layers layer-2 ${game}-art-layer-2`}></div>
                     <div className={`main-art-layers layer-3 ${game}-art-layer-3`}></div>
 
-                    {topFixedLayer && 
-                        <div className={`top-layer-art-skills`}>
-
-                        </div>
+                    {(topFixedLayer && game === 'skills') && 
+                        <div className={`top-layer-art-skills`}></div>
                     }
 
-                    <div className='page-arrow-down' onClick={scrollToMain}>
+                    {(topFixedLayer && game === 'pixelgames') &&
+                        <img src={require('../images/pixelgames-arcade-machine.png')} alt="Arcade Machine" className='top-layer-art-pixelgames'/>
+                    }
 
-                    </div>
+                    <div className='page-arrow-down' onClick={scrollToMain}></div>
                 </div>
             }
 
