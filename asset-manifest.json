@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.647685d3.css",
-    "main.js": "/static/js/main.4a62313b.js",
+    "main.js": "/static/js/main.9e66836e.js",
     "static/js/787.3aeecc06.chunk.js": "/static/js/787.3aeecc06.chunk.js",
-    "static/media/resume-image.png": "/static/media/resume-image.23c175f9a67eccf57fab.png",
+    "static/media/resume-image.png": "/static/media/resume-image.68199866f46794b3cf83.png",
     "static/media/ttt-screenshot-3.png": "/static/media/ttt-screenshot-3.a3e04b029e7f065018d3.png",
     "static/media/dragdrop-animation-horizontal.gif": "/static/media/dragdrop-animation-horizontal.2c0c0393bbb435152f15.gif",
-    "static/media/my-resume.pdf": "/static/media/my-resume.3a969400bfe964708d4a.pdf",
+    "static/media/my-resume.pdf": "/static/media/my-resume.282cdf0125542aadc7ca.pdf",
     "static/media/maze-screenshot-2.png": "/static/media/maze-screenshot-2.b680f5c0867ccc31ba4e.png",
     "static/media/maze-screenshot-4.png": "/static/media/maze-screenshot-4.e5ca8b863b0e17e963ff.png",
     "static/media/maze-screenshot-1.png": "/static/media/maze-screenshot-1.e17cb2fb0a74c535f12e.png",
@@ -25,11 +25,11 @@
     "static/media/pixelgames-main-art-2.png": "/static/media/pixelgames-main-art-2.e25d7cec4aee988e1e30.png",
     "index.html": "/index.html",
     "main.647685d3.css.map": "/static/css/main.647685d3.css.map",
-    "main.4a62313b.js.map": "/static/js/main.4a62313b.js.map",
+    "main.9e66836e.js.map": "/static/js/main.9e66836e.js.map",
     "787.3aeecc06.chunk.js.map": "/static/js/787.3aeecc06.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.647685d3.css",
-    "static/js/main.4a62313b.js"
+    "static/js/main.9e66836e.js"
   ]
 }
