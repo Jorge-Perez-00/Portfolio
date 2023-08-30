@@ -16,19 +16,22 @@ function Codeboy(props) {
 
             <div className="image-cards-container">
                 <div className="image-card">
-                    <img src={require(`../images/Games/skyblue-game-aboutme.png`)} alt="javascript" className="image-card-image pixel-art-images" />
+                    <img src={require(`../images/Games/skyblue-game-aboutme.png`)} alt="aboutme" className="image-card-image pixel-art-images" />
                 </div>
                 <div className="image-card">
-                    <img src={require(`../images/Games/skyblue-game-skills.png`)} alt="javascript" className="image-card-image pixel-art-images" />
+                    <img src={require(`../images/Games/skyblue-game-skills.png`)} alt="skills" className="image-card-image pixel-art-images" />
                 </div>
                 <div className="image-card">
-                    <img src={require(`../images/Games/skyblue-game-tictactoe.png`)} alt="javascript" className="image-card-image pixel-art-images" />
+                    <img src={require(`../images/Games/skyblue-game-tictactoe.png`)} alt="tic-tac-toe" className="image-card-image pixel-art-images" />
                 </div>
                 <div className="image-card">
-                    <img src={require(`../images/Games/skyblue-game-maze.png`)} alt="javascript" className="image-card-image pixel-art-images" />
+                    <img src={require(`../images/Games/skyblue-game-maze.png`)} alt="maze" className="image-card-image pixel-art-images" />
                 </div>
                 <div className="image-card">
-                    <img src={require(`../images/Games/skyblue-game-codeboy.png`)} alt="javascript" className="image-card-image pixel-art-images" />
+                    <img src={require(`../images/Games/skyblue-game-codeboy.png`)} alt="codeboy" className="image-card-image pixel-art-images" />
+                </div>
+                <div className="image-card">
+                    <img src={require(`../images/Games/skyblue-game-pixelgames.png`)} alt="pixel games" className="image-card-image pixel-art-images" />
                 </div>
             </div>
 

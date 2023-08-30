@@ -279,16 +279,16 @@ function Singlepage(props) {
                 <h1 className='subtitle'>PROJECTS</h1>
 
                 <div className="cards-container project-cards-container">
-                    <div className="card project-cards">
+                    {/*<div className="card project-cards">
                         <img src={require(`../images/Games/skyblue-game-tictactoe.png`)} alt="my pixelated character" className="card-image pixel-art-images project-images" />
                         <div className="card-text-container">
                             <h3 className="card-title">Tic-Tac-Toe</h3>
                             <p className="card-text project-text">Simple tic-tac-toe game where you play against an agent that was trained with reinforcement learning. </p>
                         </div>
-                    </div>
+                    </div>*/}
 
                     <div className="card project-cards">
-                        <img src={require(`../images/Games/skyblue-game-maze.png`)} alt="NYC" className="card-image pixel-art-images project-images" />
+                        <img src={require(`../images/Games/skyblue-game-maze.png`)} alt="maze" className="card-image pixel-art-images project-images" />
                         <div className="card-text-container">
                             <h3 className="card-title">Maze</h3>
                             <p className="card-text project-text">Maze application where you can train an agent to solve any 30x30 maze with reinforcement learning, play 1 player and 2 player offline games, and play a 4 player online multiplayer game.</p>
@@ -296,13 +296,20 @@ function Singlepage(props) {
                     </div>
 
                     <div className="card project-cards">
-                        <img src={require(`../images/Games/skyblue-game-codeboy.png`)} alt="Hunter College" className="card-image pixel-art-images project-images" />
+                        <img src={require(`../images/Games/skyblue-game-codeboy.png`)} alt="codeboy" className="card-image pixel-art-images project-images" />
                         <div className="card-text-container">
                             <h3 className="card-title">Codeboy</h3>
                             <p className="card-text project-text">My coding portfolio built with a lot of love. The portfolio was built with reactjs and it contains many animations and custom art implemented and created from scratch by me.</p>
                         </div>
                     </div>
 
+                    <div className="card project-cards">
+                        <img src={require(`../images/Games/skyblue-game-pixelgames.png`)} alt="pixel games" className="card-image pixel-art-images project-images" />
+                        <div className="card-text-container">
+                            <h3 className="card-title">Pixel Games</h3>
+                            <p className="card-text project-text">Reactjs app where you can play browser games like tic-tac-toe, blackjack, memory games, and many more.</p>
+                        </div>
+                    </div>
                 </div>
 
 
